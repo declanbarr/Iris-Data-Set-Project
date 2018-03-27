@@ -10,7 +10,7 @@
 * Read wikipedia article on Iris Flower Data Set
     * ~Introduction~
     * Use of the data set
-
+* Type up summary
 #### Summarise the data set
 ##### Completion date: 12th April 2018
 
