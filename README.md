@@ -13,7 +13,22 @@
 * Type up summary
 #### Summarise the data set
 ##### Completion date: 12th April 2018
-
+* For each species calculate:
+   * Five-number summary (see https://en.wikipedia.org/wiki/Five-number_summary)
+      * min
+      * Q1
+      * Q2 (technically median)
+      * Q3
+      * Max
+   * Average
+      * Mean
+      * Mode
+      * Median
+   * Spread
+      * Variance
+      * Standard Deviation
+      * IQR
+      * Range
 
 #### Summarise investigations
 ##### Completion date: 21st April 2018
