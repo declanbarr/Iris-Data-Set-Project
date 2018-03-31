@@ -6,4 +6,4 @@
 import numpy as np
 dataSet = np.genfromtxt('data/iris.csv',delimiter=',')
 
-np.mean(dataSet, axis=0)
+print(np.mean(dataSet, axis=0))
