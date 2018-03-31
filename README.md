@@ -10,7 +10,13 @@
 * Read wikipedia article on Iris Flower Data Set
     * ~Introduction~
     * Use of the data set
-* Read unkown terms from Iris Flower Data Set on wikipedia    
+* Read unkown terms from Iris Flower Data Set on wikipedia  
+    * linear discriminant analysis/model
+    * support vector machines
+    * cluster analysis (also explain what a cluster is)
+    * data mining
+    * nonlinear branching principal component
+    * metro map
 * Read references on Iris Flower Data Set on wikipedia
 * Type up summary
 #### Summarise the data set
