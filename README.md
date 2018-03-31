@@ -10,7 +10,7 @@
 * Read wikipedia article on Iris Flower Data Set
     * ~Introduction~
     * Use of the data set
-        * ~ First two paragraphs ~
+        * ~First two paragraphs~
         * Last paragraph (too many unkown terms)
 * Read unkown terms from Iris Flower Data Set on wikipedia  
     * linear discriminant analysis/model
