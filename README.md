@@ -37,7 +37,7 @@
         * sl/sw and plot against pl/pw?
         * sw times sl plotted against pw times pl?
         * 1/sw plotted against 1/sl
-        * plot of area of sepal length vs area of petal length
+        * plot of area of sepal vs area of peta
         * 1/ log sw etc
         * multiply or divide a feature by a factor
         * etc
