@@ -57,6 +57,7 @@
         * multiply or divide a feature by a factor
         * etc
         * Is this what machine learning does? 
+* Produce graphs, see http://www.statisticshowto.com/types-graphs/#segmentedbartypes
 #### Summarise investigations
 ##### Completion date: 21st April 2018
 
