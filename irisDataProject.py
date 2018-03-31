@@ -3,6 +3,6 @@
 # Using numpy to read csv files https://www.dataquest.io/blog/numpy-cheat-sheet/
 
 import numpy as np
-dataSet = np.genfromtxt('file.csv',delimiter=',')
+dataSet = np.genfromtxt('iris.csv',delimiter=',')
 
 print(dataSet)
