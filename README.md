@@ -1,8 +1,21 @@
-# Iris Data Set Project
+# Iris Flower Data Set Project
 
 
 ## Project for Programming and Scripting Module
 
+
+### Summary on the Iris Flower Data Set
+
+[https://en.wikipedia.org/wiki/Iris_flower_data_set]
+Wiki intro
+The Iris Flower Data Set is a data set collected by Edgar Anderson. It consists of 50 samples for each of Iris setosa, Iris virginica and Iris versicolor; three related species of Iris flower. It is a multivariate data set meaning there is more than one variable. There are a total of 150 records under 5 attributes: petal length, petal width, sepal length, sepal width and class.
+
+Ronald Fischer used the data set to perform a linear discriminant analysis which he detailed in his 1936 paper The use of multiple measurements in taxonomic problems. A linear discriminant analysis is .....
+
+Use of the data set
+Data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor. 
+
+(Provide link to wikipedia article above and to Fischer's 1936 paper)
 
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
@@ -12,7 +25,7 @@
     * Use of the data set
         * ~First two paragraphs~
         * Last paragraph (too many unkown terms)
-* Read unkown terms from Iris Flower Data Set on wikipedia  
+* Read unknown terms from Iris Flower Data Set on wikipedia  
     * linear discriminant analysis/model
     * support vector machines
     * cluster analysis (also explain what a cluster is)
@@ -20,14 +33,14 @@
     * nonlinear branching principal component
     * metro map
 * Read references on Iris Flower Data Set on wikipedia
-    * Edgar Anderson (1936). "The species problem in Iris"
+    * ~Edgar Anderson (1936). "The species problem in Iris"~ (contains a lot of irrelevant information for this project)
     * R. A. Fisher (1936). "The use of multiple measurements in taxonomic problems"
     * A. N. Gorban, A. Zinovyev. Principal manifolds and graphs in practice: from molecular biology to dynamical systems
     * UCI Machine Learning Repository: Iris Data Set
     * On Using Class-Labels in Evaluation of Clusterings
     * Topological grammars for data approximation
     * Will the real iris data please stand up?
-* Type up summary
+* Type up summary (This would be best to be done immediatley instead of typing everything up at the end)
 #### Summarise the data set
 ##### Completion date: 12th April 2018
 * For each species calculate:
