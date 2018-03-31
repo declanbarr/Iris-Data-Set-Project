@@ -20,6 +20,13 @@
     * nonlinear branching principal component
     * metro map
 * Read references on Iris Flower Data Set on wikipedia
+    * Edgar Anderson (1936). "The species problem in Iris"
+    * R. A. Fisher (1936). "The use of multiple measurements in taxonomic problems"
+    * A. N. Gorban, A. Zinovyev. Principal manifolds and graphs in practice: from molecular biology to dynamical systems
+    * UCI Machine Learning Repository: Iris Data Set
+    * On Using Class-Labels in Evaluation of Clusterings
+    * Topological grammars for data approximation
+    * Will the real iris data please stand up?
 * Type up summary
 #### Summarise the data set
 ##### Completion date: 12th April 2018
