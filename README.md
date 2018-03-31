@@ -17,6 +17,11 @@ Data set contains two clusters. One cluster contains Iris setosa and the other c
 
 (Provide link to wikipedia article above and to Fischer's 1936 paper)
 
+[https://archive.ics.uci.edu/ml/datasets/iris]
+* Includes download of dataset (provide instructions?)
+* Explanation of the data set
+* References to read (see project plan)
+   
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
 ##### Completion date: 3rd April 2018
@@ -37,6 +42,9 @@ Data set contains two clusters. One cluster contains Iris setosa and the other c
     * R. A. Fisher (1936). "The use of multiple measurements in taxonomic problems"
     * A. N. Gorban, A. Zinovyev. Principal manifolds and graphs in practice: from molecular biology to dynamical systems
     * UCI Machine Learning Repository: Iris Data Set
+        * Duda,R.O., & Hart,P.E. (1973) Pattern Classification and Scene Analysis. (Q327.D83) John Wiley & Sons. ISBN 0-471-22361-1. See page 218. 
+        * Dasarathy, B.V. (1980) "Nosing Around the Neighborhood: A New System Structure and Classification Rule for Recognition in Partially Exposed Environments". IEEE Transactions on Pattern Analysis and Machine Intelligence, Vol. PAMI-2, No. 1, 67-71. 
+        * Gates, G.W. (1972) "The Reduced Nearest Neighbor Rule". IEEE Transactions on Information Theory, May 1972, 431-433. 
     * On Using Class-Labels in Evaluation of Clusterings
     * Topological grammars for data approximation
     * Will the real iris data please stand up?
