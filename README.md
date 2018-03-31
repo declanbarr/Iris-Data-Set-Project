@@ -10,7 +10,7 @@
 * Read wikipedia article on Iris Flower Data Set
     * ~Introduction~
     * Use of the data set
-* Read unkown terms from Iris Flower Data Set on wikipedia
+* Read unkown terms from Iris Flower Data Set on wikipedia    
 * Read references on Iris Flower Data Set on wikipedia
 * Type up summary
 #### Summarise the data set
@@ -31,7 +31,17 @@
       * Standard Deviation
       * IQR
       * Range
-
+* Read https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/r/iris_plots/
+    * Scatter plots of sw, sl, pl and pw.
+    * Can relationships be made between sizes eg
+        * sl/sw and plot against pl/pw?
+        * sw times sl plotted against pw times pl?
+        * 1/sw plotted against 1/sl
+        * plot of area of sepal length vs area of petal length
+        * 1/ log sw etc
+        * multiply or divide a feature by a factor
+        * etc
+        * Is this what machine learning does? 
 #### Summarise investigations
 ##### Completion date: 21st April 2018
 
