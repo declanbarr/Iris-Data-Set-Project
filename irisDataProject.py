@@ -14,3 +14,4 @@ print(df)
 print(np.mean(df, axis=0)) # Axis = 0 means the columns, Axis = 1 means the rows
 print("Rows 1 to 50 are:", df.iloc[0:50])
 print("Rows 1 to 50 of Sepal length are:", df.iloc[0:50,[0]])
+print("Mean of Sepal length for rows 1 to 50 is:", np.mean(df.iloc[0:50, [0]]))
