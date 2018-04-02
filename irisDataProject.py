@@ -9,7 +9,8 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] )
-
+df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) 
 print(df)
-print(np.mean(df, axis=0))
+print(np.mean(df, axis=1))
+print("Rows 1 to 50 are:", df.iloc[0:50])
+
