@@ -24,7 +24,7 @@ Data set contains two clusters. One cluster contains Iris setosa and the other c
    
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
-##### Completion date: 3rd April 2018
+##### Completion date: ~3rd April 2018~ 12th April 2018 (To be completed in parallel with "Summarise the Data Set")
 * Read wikipedia article on Iris Flower Data Set
     * ~Introduction~
     * Use of the data set
