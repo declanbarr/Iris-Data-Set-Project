@@ -31,7 +31,7 @@ Data set contains two clusters. One cluster contains Iris setosa and the other c
         * ~First two paragraphs~
         * Last paragraph (too many unkown terms)
 * Read unknown terms from Iris Flower Data Set on wikipedia  
-    * linear discriminant analysis/model
+    * linear discriminant analysis/model https://www.youtube.com/watch?v=azXCzI57Yfc
     * support vector machines
     * cluster analysis (also explain what a cluster is)
     * data mining
