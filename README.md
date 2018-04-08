@@ -58,7 +58,7 @@ When there are 3 categories, the means for each category is measured from a cent
         * ~First two paragraphs~
         * Last paragraph (too many unkown terms)
 * Read unknown terms from Iris Flower Data Set on wikipedia  
-    * linear discriminant analysis/model https://www.youtube.com/watch?v=azXCzI57Yfc
+    * ~linear discriminant analysis/model~ https://www.youtube.com/watch?v=azXCzI57Yfc
     * support vector machines
     * cluster analysis (also explain what a cluster is)
     * data mining
@@ -107,6 +107,7 @@ When there are 3 categories, the means for each category is measured from a cent
         * etc
         * Is this what machine learning does? 
 * Produce graphs, see http://www.statisticshowto.com/types-graphs/#segmentedbartypes
+* Perform LDA on data set - show before and after pictures to illustrate how LDA has improved the separation of the data points (these pictures are to be added to summarise investigations below
 #### Summarise investigations
 ##### Completion date: 21st April 2018
 
