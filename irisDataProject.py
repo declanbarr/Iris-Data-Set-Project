@@ -10,11 +10,11 @@ import pandas as pd
 import numpy as np
 
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) 
-print(df)
-print(np.mean(df, axis=0)) # Axis = 0 means the columns, Axis = 1 means the rows
-print("Rows 1 to 50 are:", df.iloc[0:50])
-print("Rows 1 to 50 of Sepal length are:", df.iloc[0:50,[0]])
-print("Mean of Sepal length for rows 1 to 50 is:", np.mean(df.iloc[0:50, [0]]))
+# print(df)
+# print(np.mean(df, axis=0)) # Axis = 0 means the columns, Axis = 1 means the rows
+# print("Rows 1 to 50 are:", df.iloc[0:50])
+# print("Rows 1 to 50 of Sepal length are:", df.iloc[0:50,[0]])
+# print("Mean of Sepal length for rows 1 to 50 is:", np.mean(df.iloc[0:50, [0]]))
 
 
 # Attemping to create a loop that can cycle through classes - group of rows 0 to 49, 50 to 99 and 100 to 149
@@ -23,3 +23,10 @@ imin = 0
 imax = 50
 x = 0
 print("The setosa rows are: ", df.iloc[imin:imax, [x]])
+
+# This loop will print each of the attributes for each of the class of flowers
+# Loop through flower classifications
+for c in range(0, 3)
+
+# Loop through attributes
+    for a in range(0, 4)
