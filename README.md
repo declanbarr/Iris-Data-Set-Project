@@ -21,17 +21,44 @@ Data set contains two clusters. One cluster contains Iris setosa and the other c
 * Includes download of dataset (provide instructions?)
 * Explanation of the data set
 * References to read (see project plan)
+
+#### Linear discriminant analysis
+https://www.youtube.com/watch?v=azXCzI57Yfc
+
+(make reference to above about how clusters of Iris virginica and Iris versicolor aren't easily separable)
+Linear discriminant analysis is a method for maximising the separability of known categories. In LDA information fromm two variables are combined into a single axis in a way that maximizes the separation of the two categories. See pic below
+
+![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/LDA.png)
+source: https://qph.ec.quoracdn.net/main-qimg-de0e3fbb98f88884fcc75f6488360602
+
+The new axis is created according to two critera which are considered simultaneously:
+1. Maximize the distance between means (mu)
+2. Minimize the variation s^2 within each category
+
+(mu1 - mu2)^2/(s1^2 + s2^2) 
+
+The numerator is esentially the square of the distance between the two means and can therefore be rewritten as d^2:
+
+d^2/(s1^2 + s2^2) 
+
+Ideally d^2 should be very large and (s1^2 + s2^2) should be very small.
+
+When there are 3 categories, the means for each category is measured from a central point. This central point is central to all points in the dataset. There will also need to be 2 axis to separate the data rather that 1 which is needed if there is only 2 categories.
+
+
+
+
    
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
-##### Completion date: 3rd April 2018
+##### Completion date: ~3rd April 2018~ 12th April 2018 (To be completed in parallel with "Summarise the Data Set")
 * Read wikipedia article on Iris Flower Data Set
     * ~Introduction~
     * Use of the data set
         * ~First two paragraphs~
         * Last paragraph (too many unkown terms)
 * Read unknown terms from Iris Flower Data Set on wikipedia  
-    * linear discriminant analysis/model
+    * linear discriminant analysis/model https://www.youtube.com/watch?v=azXCzI57Yfc
     * support vector machines
     * cluster analysis (also explain what a cluster is)
     * data mining
@@ -49,6 +76,7 @@ Data set contains two clusters. One cluster contains Iris setosa and the other c
     * Topological grammars for data approximation
     * Will the real iris data please stand up?
 * Type up summary (This would be best to be done immediatley instead of typing everything up at the end)
+    * Find out how to do symbol such as mu
 #### Summarise the data set
 ##### Completion date: 12th April 2018
 * For each species calculate:
