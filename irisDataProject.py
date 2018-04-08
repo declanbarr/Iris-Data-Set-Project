@@ -49,4 +49,6 @@ def attributefunc(arg, argname):
         for a in range(0, 4):
             print("Attribute is ", a)
             print("The ", argname, "of attribute ", a," is ")
-            arg.df.iloc[beginningRow:endRow, [a]]
+            arg(df.iloc[beginningRow:endRow, [a]])
+
+
