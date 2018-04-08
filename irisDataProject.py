@@ -54,7 +54,8 @@ for c in range(0, 3):
 # Calculate the mean for each attribute of each class
 attributefunc(np.mean, "mean")"""
 
-
+# This statement will format the return value of a function called minFunc
+# The first arguement passed to minFunc will return the string "minimum"
 print('{a[o]} {a[1]} {a[2]} {a[3]} {a[4]}'.format(a=minFunc))
 
 
