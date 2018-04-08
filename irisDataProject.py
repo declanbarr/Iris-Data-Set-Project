@@ -26,7 +26,12 @@ print("The setosa rows are: ", df.iloc[imin:imax, [x]])
 
 # This loop will print each of the attributes for each of the class of flowers
 # Loop through flower classifications
-for c in range(0, 3)
-
+for c in range(0, 3):
+    print("class of flower: ", c)
+    beginningRow = c * 50
+    endRow = beginningRow + 50
 # Loop through attributes
-    for a in range(0, 4)
+    for a in range(0, 4):
+        print("Attribute is ", a)
+        print("Data points are: \n")
+        print(df.iloc[beginningRow:endRow, [a]])
