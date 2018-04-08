@@ -15,3 +15,11 @@ print(np.mean(df, axis=0)) # Axis = 0 means the columns, Axis = 1 means the rows
 print("Rows 1 to 50 are:", df.iloc[0:50])
 print("Rows 1 to 50 of Sepal length are:", df.iloc[0:50,[0]])
 print("Mean of Sepal length for rows 1 to 50 is:", np.mean(df.iloc[0:50, [0]]))
+
+
+# Attemping to create a loop that can cycle through classes - group of rows 0 to 49, 50 to 99 and 100 to 149
+# and attributes - columns 0 to 3
+imin = 0
+imax = 50
+x = 0
+print("The setosa rows are: ", df.iloc[imin:imax, [x]])
