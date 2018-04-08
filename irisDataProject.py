@@ -50,4 +50,5 @@ def attributefunc(arg, argname):
             print("The ", argname, "of attribute ", a," is ")
             arg(df.iloc[beginningRow:endRow, [a]])
 
-
+# Calculate the mean for each attribute of each class
+attributefunc(np.mean, "mean")
