@@ -54,12 +54,21 @@ for c in range(0, 3):
 # Calculate the mean for each attribute of each class
 attributefunc(np.mean, "mean")"""
 
+# minFunc function which returns the minimum value for an attribute for Iris Setosa
+def minFunc(attribute):
+    c = 0
+    beginningRow = c * 50
+    endRow = beginningRow + 50
+    minimum = min(df.iloc[beginningRow:endRow, [attribute]])
 
+    return minimum
+
+print(minFunc(0))
 print('{0:<9} {1:<14} {2:<13} {3:<14} {4:<13} '.format("Summary", "Sepal Length", "Sepal Width", "Petal length", "Petal Width"))
 # This statement will format the return value of a function called minFunc
 # The first arguement passed to minFunc will return the string "minimum"
 
 
-# print('{a[o]} {a[1]} {a[2]} {a[3]} {a[4]}'.format(a=minFunc))
+print('{0:<9} {1:<14} {2:<13} {3:<14} {4:<13}'.format("Minimum", minFunc(0), minFunc(1), minFunc(2), minFunc(3)))
 
 
