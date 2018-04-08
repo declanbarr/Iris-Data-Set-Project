@@ -41,14 +41,17 @@ for c in range(0, 3):
 # Function that goes through each attribute for each class of flower and passes
 # a numpy argument aswell as the name
 def attributefunc(arg, argname):
+    # Loop through flower classifications
     for c in range(0, 3):
-        print("class of flower ", c)
         beginningRow = c * 50
         endRow = beginningRow + 50
-    # Loop through attributes
+        print(df.iloc[beginningRow, [4]])
+        # Loop through attributes
         for a in range(0, 4):
             print("The ", argname, "of attribute ", a," is ")
-            arg(df.iloc[beginningRow:endRow, [a]])
+            print(arg(df.iloc[beginningRow:endRow, [a]]))
 
 # Calculate the mean for each attribute of each class
 attributefunc(np.mean, "mean")
+
+
