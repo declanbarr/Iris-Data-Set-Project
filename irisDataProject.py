@@ -54,8 +54,12 @@ for c in range(0, 3):
 # Calculate the mean for each attribute of each class
 attributefunc(np.mean, "mean")"""
 
+
+print('{0:<9} {1:<14} {2:<13} {3:<14} {4:<13} '.format("Summary", "Sepal Length", "Sepal Width", "Petal length", "Petal Width"))
 # This statement will format the return value of a function called minFunc
 # The first arguement passed to minFunc will return the string "minimum"
-print('{a[o]} {a[1]} {a[2]} {a[3]} {a[4]}'.format(a=minFunc))
+
+
+# print('{a[o]} {a[1]} {a[2]} {a[3]} {a[4]}'.format(a=minFunc))
 
 
