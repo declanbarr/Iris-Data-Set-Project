@@ -47,7 +47,6 @@ def attributefunc(arg, argname):
         endRow = beginningRow + 50
     # Loop through attributes
         for a in range(0, 4):
-            print("Attribute is ", a)
             print("The ", argname, "of attribute ", a," is ")
             arg(df.iloc[beginningRow:endRow, [a]])
 
