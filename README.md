@@ -21,6 +21,17 @@ Data set contains two clusters. One cluster contains Iris setosa and the other c
 * Includes download of dataset (provide instructions?)
 * Explanation of the data set
 * References to read (see project plan)
+
+#### Linear discriminant analysis
+https://www.youtube.com/watch?v=azXCzI57Yfc
+
+![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/LDA.png)
+source: https://qph.ec.quoracdn.net/main-qimg-de0e3fbb98f88884fcc75f6488360602
+
+
+
+
+
    
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
