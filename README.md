@@ -5,15 +5,18 @@
 
 
 ### Summary on the Iris Flower Data Set
+<p align="center">
+  <img src="pic">
 
-[https://en.wikipedia.org/wiki/Iris_flower_data_set]
-#### Wiki intro
-The Iris Flower Data Set is a data set collected by Edgar Anderson. It consists of 50 samples for each of Iris setosa, Iris virginica and Iris versicolor; three related species of Iris flower. It is a multivariate data set meaning there is more than one variable. There are a total of 150 records under 5 attributes: petal length, petal width, sepal length, sepal width and class. (picture on petals and sepals)
+The Iris Flower Data Set is a data set collected by Edgar Anderson. It consists of 50 samples for each of Iris setosa, Iris virginica and Iris versicolor; three related species of Iris flower. It is a multivariate data set meaning there is more than one variable. There are a total of 150 records under 5 attributes: petal length, petal width, sepal length, sepal width and class. [1]
 
-Ronald Fischer used the data set to perform a linear discriminant analysis which he detailed in his 1936 paper The use of multiple measurements in taxonomic problems. A linear discriminant analysis is .....
+
+
+Ronald Fischer used the data set to perform a linear discriminant analysis which he detailed in his 1936 paper The use of multiple measurements in taxonomic problems[2]. A linear discriminant analysis is .....
 
 #### Use of the data set
-Data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor. (provdie pictures on flowers) 
+Data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor. (provdie pictures on flowers).
+
 
 (Provide link to wikipedia article above and to Fischer's 1936 paper)
 
@@ -45,13 +48,28 @@ Ideally d^2 should be very large and (s1^2 + s2^2) should be very small.
 
 When there are 3 categories, the means for each category is measured from a central point. This central point is central to all points in the dataset. There will also need to be 2 axis to separate the data rather that 1 which is needed if there is only 2 categories.
 
+(wikipedia article on iris data set)
+Linear discriminant analysis can only be used on the iris data set when when the species are known. When the species are not known the Nonlinear Dimensionality Reduction technique of Nonlinear Principal Component Analysis is able to separte the data based on species.
 
 
 
-   
+
+#### Support Vector Machines
+
+
+#### References
+[1] Wikipedia. Iris flower data set
+[https://en.wikipedia.org/wiki/Iris_flower_data_set]
+
+[2] Annals of Eugenics. The use of multiple measurements in taxonomic problems.
+[https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x]
+
+
+
+
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
-##### Completion date: ~3rd April 2018~ 12th April 2018 (To be completed in parallel with "Summarise the Data Set")
+##### Completion date: ~3rd April 2018~ ~12th April 2018~ 19th April 2018 (using contingency week here)(To be completed in parallel with "Summarise the Data Set")
 * Read wikipedia article on Iris Flower Data Set
     * ~Introduction~
     * Use of the data set
@@ -64,6 +82,7 @@ When there are 3 categories, the means for each category is measured from a cent
     * data mining
     * nonlinear branching principal component
     * metro map
+    * Nonlinear Principal Component Analysis
 * Read references on Iris Flower Data Set on wikipedia
     * ~Edgar Anderson (1936). "The species problem in Iris"~ (contains a lot of irrelevant information for this project)
     * R. A. Fisher (1936). "The use of multiple measurements in taxonomic problems"
@@ -75,26 +94,27 @@ When there are 3 categories, the means for each category is measured from a cent
     * On Using Class-Labels in Evaluation of Clusterings
     * Topological grammars for data approximation
     * Will the real iris data please stand up?
+    
 * Type up summary (This would be best to be done immediatley instead of typing everything up at the end)
     * Find out how to do symbol such as mu
 #### Summarise the data set
-##### Completion date: 12th April 2018
+##### Completion date: ~12th April 2018~ 19th April 2018 (using contingency week here)
 * For each species calculate:
-   * Five-number summary (see https://en.wikipedia.org/wiki/Five-number_summary)
-      * min
-      * Q1
-      * Q2 (technically median)
-      * Q3
-      * Max
+   * ~Five-number summary (see https://en.wikipedia.org/wiki/Five-number_summary)~
+      * ~min~
+      * ~Q1~
+      * ~Q2 (technically median)~
+      * ~Q3~
+      * ~Max~
    * Average
-      * Mean
-      * Mode
-      * Median
+      * ~Mean~
+      * Mode 
+      * ~Median~
    * Spread
       * Variance
-      * Standard Deviation
-      * IQR
-      * Range
+      * ~Standard Deviation~
+      * IQR (Boxplot to be used to display IQR)
+      * Range (Boxplot to be used to display range)
 * Read https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/r/iris_plots/
     * Scatter plots of sw, sl, pl and pw.
     * Can relationships be made between sizes eg
@@ -108,10 +128,11 @@ When there are 3 categories, the means for each category is measured from a cent
         * Is this what machine learning does? 
 * Produce graphs, see http://www.statisticshowto.com/types-graphs/#segmentedbartypes
 * Perform LDA on data set - show before and after pictures to illustrate how LDA has improved the separation of the data points (these pictures are to be added to summarise investigations below
+* Glossary of terms - provide a link from each term to a definition either at the bottom of the readme or to a separte file in the project folder/ provide link to wikipedia
 #### Summarise investigations
-##### Completion date: 21st April 2018
+##### Completion date: ~21st April 2018~ 28th April 2018 (moved back due to use of contingency week)
 
 
-#### Contingency week
+#### ~Contingency week~
 ##### Completion date: 29th April 2018
 
