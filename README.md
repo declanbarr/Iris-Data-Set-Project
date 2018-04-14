@@ -5,9 +5,10 @@
 
 
 ### Summary on the Iris Flower Data Set
+#### Introduction
 <p align="center">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Ronald%20Fischer.jpg">
-  <b>Ronald Fisher</b><br>
+  <br><b>Ronald Fisher</b><br>
   
 The Iris Flower Data Set is a data set collected by Edgar Anderson. It consists of 50 samples for each of Iris setosa, Iris virginica and Iris versicolor; three related species of Iris flower. It is a multivariate data set meaning there is more than one variable. There are a total of 150 records under 5 attributes: petal length, petal width, sepal length, sepal width and class. [1]
 
@@ -15,36 +16,25 @@ The Iris Flower Data Set is a data set collected by Edgar Anderson. It consists 
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Iris%20setosa.jpg">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Iris%20virginica.jpg">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Iris%20versicolor.jpg">
-  <b>Iris setosa, Iris virginica and Iris versicolor</b><br>
+  <br><b>Iris setosa, Iris virginica and Iris versicolor</b><br>
 <p align="center">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Petal%20and%20Sepal%20length%20and%20width.jpg">
-  <b>Measure of petal and sepal</b><br>
+  <br><b>Measure of petal and sepal</b><br>
 
-Ronald Fischer used the data set to perform a linear discriminant analysis which he detailed in his 1936 paper The use of multiple measurements in taxonomic problems[2]. A linear discriminant analysis is .....
+Ronald Fischer performed a Linear Discriminant on the data set which he detailed in his 1936 paper "The use of multiple measurements in taxonomic problems"[2]. The Linear Disciminant works on only 2 classes. The method was later developed into the Linear Discriminant analysis by C. R. Rao in 1948 "The utilization of multiple measurements in problems of biological classification"[3,4] This enables the analysis of more than two classes.
 
-#### Use of the data set
-Data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor. (provdie pictures on flowers).
-
-
-(Provide link to wikipedia article above and to Fischer's 1936 paper)
-
-[https://archive.ics.uci.edu/ml/datasets/iris]
-* Includes download of dataset (provide instructions?)
-* Explanation of the data set
-* References to read (see project plan)
 
 #### Linear discriminant analysis
-https://www.youtube.com/watch?v=azXCzI57Yfc
 
-(make reference to above about how clusters of Iris virginica and Iris versicolor aren't easily separable)
-Linear discriminant analysis is a method for maximising the separability of known categories. In LDA information fromm two variables are combined into a single axis in a way that maximizes the separation of the two categories. See pic below
-
+The data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor.[1]
 ![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/LDA.png)
-source: https://qph.ec.quoracdn.net/main-qimg-de0e3fbb98f88884fcc75f6488360602
-
+[5]
+Linear discriminant analysis is a method for maximising the separability of known categories. In LDA information from two variables are combined into a single axis in a way that maximizes the separation of the two categories. See pic above
 The new axis is created according to two critera which are considered simultaneously:
 1. Maximize the distance between means (mu)
-2. Minimize the variation s^2 within each category
+2. Minimize the variation (s^2) within each category
+
+This can be achieved by the following formula:
 
 (mu1 - mu2)^2/(s1^2 + s2^2) 
 
@@ -52,18 +42,19 @@ The numerator is esentially the square of the distance between the two means and
 
 d^2/(s1^2 + s2^2) 
 
-Ideally d^2 should be very large and (s1^2 + s2^2) should be very small.
+Ideally d^2 should be very large and (s1^2 + s2^2) should be very small. When there are 3 categories, the means for each category is measured from a central point. This central point is central to all points in the dataset. There will also need to be 2 axis to separate the data rather that 1 which is needed if there is only 2 categories.[6]
 
-When there are 3 categories, the means for each category is measured from a central point. This central point is central to all points in the dataset. There will also need to be 2 axis to separate the data rather that 1 which is needed if there is only 2 categories.
-
-(wikipedia article on iris data set)
-Linear discriminant analysis can only be used on the iris data set when when the species are known. When the species are not known the Nonlinear Dimensionality Reduction technique of Nonlinear Principal Component Analysis is able to separte the data based on species.
+Linear discriminant analysis can only be used on the iris data set when when the species are known. When the species are not known the Nonlinear Dimensionality Reduction technique of Nonlinear Principal Component Analysis is able to separte the data based on species.[1]
 
 
 
 
 #### Support Vector Machines
 
+[https://archive.ics.uci.edu/ml/datasets/iris]
+* Includes download of dataset (provide instructions?)
+* Explanation of the data set
+* References to read (see project plan)
 
 #### References
 [1] Wikipedia. Iris flower data set
@@ -72,8 +63,17 @@ Linear discriminant analysis can only be used on the iris data set when when the
 [2] Annals of Eugenics. The use of multiple measurements in taxonomic problems.
 [https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x]
 
+[3] Wikipedia. Linear discriminant analysis
+https://en.wikipedia.org/wiki/Linear_discriminant_analysis
 
+[4] Journal of the Royal Statistical Society. The utilization of multiple measurements in problems of biological classification
+https://www.jstor.org/stable/2983775?seq=1#page_scan_tab_contents
 
+[5] DTREG: Predictive modelling software. Linear Discriminant Analysis
+https://www.dtreg.com/solution/view/27
+
+[6] StatQuest. Linear Discriminant Analysis (LDA), clearly explained
+https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clearly-explained/
 
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
