@@ -14,6 +14,12 @@ print(df.describe())
 setosa = (df.iloc[0:50])
 print("Setosa: \n", setosa)
 
+versicolor = (df.iloc[50:100])
+print("versicolor: \n", versicolor)
+
+virginica = (df.iloc[100:150])
+print("virginica: \n", virginica)
+
 
 
 
