@@ -8,17 +8,24 @@ import pandas as pd
 
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) 
 
+print("Number of rows and columns: ", df.shape)
+
 print("Basic Statistics for entire dataset: ")
 print(df.describe())
 
 setosa = (df.iloc[0:50])
-print("Setosa: \n", setosa)
+print("Basic statistics for Iris setosa: ")
+print(setosa.describe())
 
 versicolor = (df.iloc[50:100])
-print("versicolor: \n", versicolor)
+print("Basic statistics for Iris versicolor: ")
+print(versicolor.describe())
 
 virginica = (df.iloc[100:150])
-print("virginica: \n", virginica)
+print("Basic statistics for Iris virginica: ")
+print(virginica.describe())
+
+
 
 
 
