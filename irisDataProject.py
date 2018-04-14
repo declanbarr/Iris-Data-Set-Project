@@ -11,6 +11,9 @@ df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal L
 print("Basic Statistics for entire dataset: ")
 print(df.describe())
 
+setosa = (df.iloc[0:50])
+print("Setosa: \n", setosa)
+
 
 
 
