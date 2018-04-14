@@ -27,9 +27,9 @@ Ronald Fischer performed a Linear Discriminant on the data set which he detailed
 #### Linear discriminant analysis
 
 The data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor.[1]
-![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/LdaSepGood.jpg)
+![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Ldaseparation.png)
 [5]
-Linear discriminant analysis is a method for maximising the separability of known categories. In LDA information from two variables are combined into a single axis in a way that maximizes the separation of the two categories. The new axis is created according to two critera which are considered simultaneously:
+Linear discriminant analysis is a method for maximising the separability of known categories. In LDA information from two variables are combined into a single axis in a way that maximizes the separation of the two categories, see pic above. The new axis is created according to two critera which are considered simultaneously:
 1. Maximize the distance between means (mu)
 2. Minimize the variation (s^2) within each category
 
@@ -68,8 +68,8 @@ https://en.wikipedia.org/wiki/Linear_discriminant_analysis
 [4] Journal of the Royal Statistical Society. The utilization of multiple measurements in problems of biological classification
 https://www.jstor.org/stable/2983775?seq=1#page_scan_tab_contents
 
-[5] DTREG: Predictive modelling software. Linear Discriminant Analysis
-https://www.dtreg.com/solution/view/27
+[5] Free code camp. The Curse of Dimensionality
+https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335
 
 [6] StatQuest. Linear Discriminant Analysis (LDA), clearly explained
 https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clearly-explained/
