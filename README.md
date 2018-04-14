@@ -7,10 +7,18 @@
 ### Summary on the Iris Flower Data Set
 <p align="center">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Ronald%20Fischer.jpg">
-
+  <b>Ronald Fisher</b><br>
+  
 The Iris Flower Data Set is a data set collected by Edgar Anderson. It consists of 50 samples for each of Iris setosa, Iris virginica and Iris versicolor; three related species of Iris flower. It is a multivariate data set meaning there is more than one variable. There are a total of 150 records under 5 attributes: petal length, petal width, sepal length, sepal width and class. [1]
 
-
+<p align="center">
+  <img src="">
+  <img src="">
+  <img src="">
+  <b>Iris setosa, Iris virginica and Iris versicolor</b><br>
+<p align="center">
+  <img src="">
+  <b>Measure of petal and sepal</b><br>
 
 Ronald Fischer used the data set to perform a linear discriminant analysis which he detailed in his 1936 paper The use of multiple measurements in taxonomic problems[2]. A linear discriminant analysis is .....
 
