@@ -9,7 +9,7 @@ import pandas as pd
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) 
 
 print("Basic Statistics for entire dataset: ")
-df.describe()
+print(df.describe())
 
 
 
