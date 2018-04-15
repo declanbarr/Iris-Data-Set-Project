@@ -66,6 +66,14 @@ Linear discriminant analysis can only be used on the iris data set when the spec
 
 #### metro map
 
+
+
+
+### Summary of Investigations
+This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). The python script that I wrote to investigate the data set is contained within this repository and is named [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data).
+
+
+
 #### References
 [1] Wikipedia. Iris flower data set
 [https://en.wikipedia.org/wiki/Iris_flower_data_set]
