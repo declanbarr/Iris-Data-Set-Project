@@ -70,8 +70,52 @@ Linear discriminant analysis can only be used on the iris data set when the spec
 
 
 ### Summary of Investigations
-This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). The python script that I wrote to investigate the data set is contained within this repository and is named [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data).
 
+(need to write in what version of python, anaconda etc)
+(need to write what investigating a data set entails and how python can be used to do it)
+    * what a library is
+    * how to import etc
+
+This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). The python script that I wrote to investigate the data set is contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
+
+The dataset can be read using the "read" function which is a part of the Pandas library. The Pandas library is a free to use....
+
+(What is a dataframe)
+The following code can be used to create a dataframe from the Iris flower data set and assign headers to the colums:
+
+Input
+```python
+import pandas as pd
+
+df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) 
+```
+
+Input
+```python
+print(df.head(5))
+```
+Output
+```
+   Sepal Length  Sepal Width  Petal Length  Petal Width        Class
+0           5.1          3.5           1.4          0.2  Iris-setosa
+1           4.9          3.0           1.4          0.2  Iris-setosa
+2           4.7          3.2           1.3          0.2  Iris-setosa
+3           4.6          3.1           1.5          0.2  Iris-setosa
+4           5.0          3.6           1.4          0.2  Iris-setosa
+```
+Input
+```python
+print(df.tail(5))
+```
+Output
+```
+     Sepal Length  Sepal Width  Petal Length  Petal Width           Class
+145           6.7          3.0           5.2          2.3  Iris-virginica
+146           6.3          2.5           5.0          1.9  Iris-virginica
+147           6.5          3.0           5.2          2.0  Iris-virginica
+148           6.2          3.4           5.4          2.3  Iris-virginica
+149           5.9          3.0           5.1          1.8  Iris-virginica
+```
 
 
 #### References
