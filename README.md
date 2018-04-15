@@ -24,11 +24,18 @@ The Iris Flower Data Set is a data set collected by Edgar Anderson. It consists 
 Ronald Fischer performed a Linear Discriminant on the data set which he detailed in his 1936 paper "The use of multiple measurements in taxonomic problems"[2]. The Linear Disciminant works on only 2 classes. The method was later developed into the Linear Discriminant analysis by C. R. Rao in 1948 "The utilization of multiple measurements in problems of biological classification"[3,4] This enables the analysis of more than two classes.
 
 
+[https://archive.ics.uci.edu/ml/datasets/iris]
+* Includes download of dataset (provide instructions?)
+* Explanation of the data set
+* References to read (see project plan)
+
+
 #### Linear discriminant analysis
 
 The data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor.[1]
-![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Ldaseparation.png)
-[5]
+![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Ldaseparation.png)[5]
+
+(needs to be rewritten)
 Linear discriminant analysis is a method for maximising the separability of known categories. In LDA information from two variables are combined into a single axis in a way that maximizes the separation of the two categories, see pic above. The new axis is created according to two critera which are considered simultaneously:
 1. Maximize the distance between means (mu)
 2. Minimize the variation (s^2) within each category
@@ -43,17 +50,21 @@ d^2/(s1^2 + s2^2)
 
 Ideally d^2 should be very large and (s1^2 + s2^2) should be very small. When there are 3 categories, the means for each category is measured from a central point. This central point is central to all points in the dataset. There will also need to be 2 axis to separate the data rather that 1 which is needed if there is only 2 categories.[6]
 
-Linear discriminant analysis can only be used on the iris data set when when the species are known. When the species are not known the Nonlinear Dimensionality Reduction technique of Nonlinear Principal Component Analysis is able to separte the data based on species.[1]
+Linear discriminant analysis can only be used on the iris data set when the species are known. When the species are not known the Nonlinear Dimensionality Reduction technique of Nonlinear Principal Component Analysis is able to separte the data based on species.[1]
 
+#### Principal component analysis
 
-
+#### Non linear principal component analysis
 
 #### Support Vector Machines
 
-[https://archive.ics.uci.edu/ml/datasets/iris]
-* Includes download of dataset (provide instructions?)
-* Explanation of the data set
-* References to read (see project plan)
+#### cluster analysis
+
+#### data mining
+
+#### nonlinear branching principal component
+
+#### metro map
 
 #### References
 [1] Wikipedia. Iris flower data set
@@ -106,6 +117,8 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
     * Find out how to do symbol such as mu
 #### Summarise the data set
 ##### Completion date: ~12th April 2018~ 19th April 2018 (using contingency week here)
+##### Summarise each investigation as it has been completed
+
 * For each species calculate:
    * ~Five-number summary (see https://en.wikipedia.org/wiki/Five-number_summary)~
       * ~min~
@@ -134,11 +147,21 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
         * etc
         * Is this what machine learning does? 
 * Produce graphs, see http://www.statisticshowto.com/types-graphs/#segmentedbartypes
-* Perform LDA on data set - show before and after pictures to illustrate how LDA has improved the separation of the data points (these pictures are to be added to summarise investigations below
-* Glossary of terms - provide a link from each term to a definition either at the bottom of the readme or to a separte file in the project folder/ provide link to wikipedia
-#### Summarise investigations
-##### Completion date: ~21st April 2018~ 28th April 2018 (moved back due to use of contingency week)
 
+* Reference other peoples interesing analyses of the data set
+    * Perform LDA on data set - show before and after pictures to illustrate how LDA has improved the separation of the data points (these pictures are to be added to summarise investigations below
+    * PCA
+    * Neural networks
+    * 
+ 
+* Glossary of terms - provide a link from each term to a definition either at the bottom of the readme or to a separte file in the project folder/ provide link to wikipedia
+#### Summarise investigations 
+
+* How to download dataset
+* How to run code
+
+
+##### Completion date: ~21st April 2018~ 28th April 2018 (moved back due to use of contingency week)
 
 #### ~Contingency week~
 ##### Completion date: 29th April 2018
