@@ -83,6 +83,8 @@ The dataset can be read using the "read" function which is a part of the Pandas 
 (What is a dataframe)
 The following code can be used to create a dataframe from the Iris flower data set and assign headers to the colums:
 
+(reference to pandas cheat sheet)
+
 Input
 ```python
 import pandas as pd
