@@ -8,6 +8,8 @@ import pandas as pd
 
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) 
 
+print(df.head(5))
+print(df.tail(5))
 print("Number of rows and columns: ", df.shape)
 
 print("Basic Statistics for entire dataset: ")
@@ -24,9 +26,4 @@ print(versicolor.describe())
 virginica = (df.iloc[100:150])
 print("Basic statistics for Iris virginica: ")
 print(virginica.describe())
-
-
-
-
-
 
