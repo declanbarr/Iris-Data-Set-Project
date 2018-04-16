@@ -12,6 +12,9 @@ print(df.head(5))
 print(df.tail(5))
 print("Number of rows and columns: ", df.shape)
 
+setosaSepalLength = df.iloc[0:50,[0]]
+
+
 print("Basic Statistics for entire dataset: ")
 print(df.describe())
 
