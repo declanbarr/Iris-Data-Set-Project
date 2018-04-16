@@ -13,9 +13,9 @@ print(df.tail(5))
 print("Number of rows and columns: ", df.shape)
 
 setosaSepalLength = df.iloc[0:50,[0]]
-setosaSepalLength.min()
-setosaSepalLength.max()
-setosaSepalLength.mean()
+print(setosaSepalLength.min())
+print(setosaSepalLength.max())
+print(setosaSepalLength.mean())
 
 print("Basic Statistics for entire dataset: ")
 print(df.describe())
