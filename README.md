@@ -190,7 +190,7 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
       * IQR (Boxplot to be used to display IQR)
       * Range (Boxplot to be used to display range)
 * Read https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/r/iris_plots/
-    * Scatter plots of sw, sl, pl and pw.
+    * Scatter plots of sw, sl, pl and pw. See https://www.kaggle.com/mathewnik90/machinelearning-helloworld-with-iris-full-analysis for pair plots
     * Can relationships be made between sizes eg
         * sl/sw and plot against pl/pw?
         * sw times sl plotted against pw times pl?
