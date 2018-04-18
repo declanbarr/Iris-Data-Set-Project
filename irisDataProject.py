@@ -34,7 +34,10 @@ virginica = (df.iloc[100:150]) # Assigns the subset from rows 100 to 149 to virg
 print("Summary statistics for Iris virginica: ")
 print(virginica.describe()) # Prints summary statistics for the virginica subset
 
-df.boxplot()
+df.boxplot() # Produces boxplot for entire data set (produces outlier data points for Sepal Width)
+
+
+df.plot.hist()
 
 # Pairplot
 import seaborn as sns
