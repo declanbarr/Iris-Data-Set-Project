@@ -18,17 +18,17 @@ print("Maximum value: ", setosaSepalLength.max()) # Prints the maximum value of 
 print("Mean value: ", setosaSepalLength.mean()) # Prints the mean value of the setosaSepalLenght subset
 
 print("Summary statistics for entire dataset: ") 
-print(df.describe()) 
+print(df.describe()) # Prints summary statistics (includes the count, mean, standard deviation, min, Q1, Q2, Q3 and Q4)
 
-setosa = (df.iloc[0:50])
+setosa = (df.iloc[0:50]) # Assigns the subset from rows 0 to 49 to setosa
 print("Summary statistics for Iris setosa: ")
-print(setosa.describe())
+print(setosa.describe()) # Prints summary statistics for the setosa subset
 
-versicolor = (df.iloc[50:100])
+versicolor = (df.iloc[50:100]) # Assigns the subset from rows 50 to 99 to versicolor
 print("Summary statistics for Iris versicolor: ")
-print(versicolor.describe())
+print(versicolor.describe()) # Prints summary statistics for the versicolor subset
 
-virginica = (df.iloc[100:150])
+virginica = (df.iloc[100:150]) # Assigns the subset from rows 100 to 149 to virginica
 print("Summary statistics for Iris virginica: ")
-print(virginica.describe())
+print(virginica.describe()) # Prints summary statistics for the virginica subset
 
