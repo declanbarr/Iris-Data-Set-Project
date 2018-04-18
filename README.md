@@ -85,6 +85,10 @@ The following code can be used to create a dataframe from the Iris flower data s
 
 (reference to pandas cheat sheet)
 
+(Box plot producing outlier data points)
+
+(Try to produce box plot for different flowers for the same attribute)
+
 Input
 ```python
 import pandas as pd
@@ -189,6 +193,7 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
       * ~Standard Deviation~
       * IQR (Boxplot to be used to display IQR)
       * Range (Boxplot to be used to display range)
+* Boxplots - produce boxplots comparing the same attribute across different species
 * Read https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/r/iris_plots/
     * Scatter plots of sw, sl, pl and pw. See https://www.kaggle.com/mathewnik90/machinelearning-helloworld-with-iris-full-analysis for pair plots
     * Can relationships be made between sizes eg
