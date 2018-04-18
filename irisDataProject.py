@@ -3,6 +3,8 @@
 # Using pandas to read csv files https://www.kaggle.com/ashokdavas/iris-data-analysis-pandas-numpy
 # https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf
 # Setting headers for datafile: https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60
+# Pairplot https://www.kaggle.com/mathewnik90/machinelearning-helloworld-with-iris-full-analysis
+# Showing pairplots https://stackoverflow.com/questions/26597116/seaborn-plots-not-showing-up?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 
 import pandas as pd
 
@@ -32,3 +34,8 @@ virginica = (df.iloc[100:150]) # Assigns the subset from rows 100 to 149 to virg
 print("Summary statistics for Iris virginica: ")
 print(virginica.describe()) # Prints summary statistics for the virginica subset
 
+
+import seaborn as sns
+g = sns.pairplot(df, hue='Class') # Provides a pairplot of the dataset with the different species coloured differently
+import matplotlib.pyplot as plt
+plt.show() # Shows the pairplot
