@@ -6,19 +6,19 @@
 
 import pandas as pd
 
-df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) 
+df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) # Read csv file and assigns headers to columns
 
-print(df.head(5))
-print(df.tail(5))
-print("Number of rows and columns: ", df.shape)
+print(df.head(5)) # Prints first 5 rows
+print(df.tail(5)) # prints last 5 rows
+print("Number of rows and columns: ", df.shape) 
 
-setosaSepalLength = df.iloc[0:50,[0]]
-print("Minimum value: ", setosaSepalLength.min())
-print("Maximum value: ", setosaSepalLength.max())
-print("Mean value: ", setosaSepalLength.mean())
+setosaSepalLength = df.iloc[0:50,[0]] # Assigns the subset from rows 0 to 49 of column 0 to setosaSepalLength
+print("Minimum value: ", setosaSepalLength.min()) # Prints the minimum value of the setosaSepalLength subset
+print("Maximum value: ", setosaSepalLength.max()) # Prints the maximum value of the setosaSepalLength subset
+print("Mean value: ", setosaSepalLength.mean()) # Prints the mean value of the setosaSepalLenght subset
 
-print("Basic Statistics for entire dataset: ")
-print(df.describe())
+print("Basic Statistics for entire dataset: ") 
+print(df.describe()) 
 
 setosa = (df.iloc[0:50])
 print("Basic statistics for Iris setosa: ")
