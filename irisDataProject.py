@@ -17,18 +17,18 @@ print("Minimum value: ", setosaSepalLength.min()) # Prints the minimum value of 
 print("Maximum value: ", setosaSepalLength.max()) # Prints the maximum value of the setosaSepalLength subset
 print("Mean value: ", setosaSepalLength.mean()) # Prints the mean value of the setosaSepalLenght subset
 
-print("Basic Statistics for entire dataset: ") 
+print("Summary statistics for entire dataset: ") 
 print(df.describe()) 
 
 setosa = (df.iloc[0:50])
-print("Basic statistics for Iris setosa: ")
+print("Summary statistics for Iris setosa: ")
 print(setosa.describe())
 
 versicolor = (df.iloc[50:100])
-print("Basic statistics for Iris versicolor: ")
+print("Summary statistics for Iris versicolor: ")
 print(versicolor.describe())
 
 virginica = (df.iloc[100:150])
-print("Basic statistics for Iris virginica: ")
+print("Summary statistics for Iris virginica: ")
 print(virginica.describe())
 
