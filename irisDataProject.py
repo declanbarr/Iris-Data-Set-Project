@@ -44,6 +44,13 @@ g = sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the d
 import matplotlib.pyplot as plt
 plt.show() # Shows the pairplot created
 
-sns.boxplot( y=df["Sepal Length"], x =df["Class"] ) # Adapted from https://python-graph-gallery.com/30-basic-boxplot-with-seaborn/
+# Adapted from https://python-graph-gallery.com/30-basic-boxplot-with-seaborn/
+sns.boxplot( y=df["Sepal Length"], x =df["Class"] ) 
+plt.show()
+sns.boxplot( y=df["Sepal Width"], x =df["Class"] ) 
+plt.show()
+sns.boxplot( y=df["Petal Length"], x =df["Class"] ) 
+plt.show()
+sns.boxplot( y=df["Petal Width"], x =df["Class"] ) 
 plt.show()
 
