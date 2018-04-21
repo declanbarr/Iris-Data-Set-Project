@@ -51,9 +51,13 @@ plt.show() # Shows the boxplot created for Petal Width
 
 # Histogram
 df.plot.hist(title='Histogram for entire data set') # Creates a histogram for the entire dataset
+plt.show()
 setosa.plot.hist(title='Histogram for Iris Setosa') # Creates a histogram for Iris Setosa
+plt.show()
 versicolor.plot.hist(title='Histogram for Iris Versicolor') # Creates a histogram for Iris Versicolor
+plt.show()
 virginica.plot.hist(title='Histogram for Iris Virginica') # Creates a histogram for Iris Virginica
+plt.show()
 
 # Pairplot
 
