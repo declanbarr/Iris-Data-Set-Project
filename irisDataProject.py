@@ -11,6 +11,9 @@ import pandas as pd
 pd.options.display.max_rows = 999 # Set max rows to 999 to ensure all rows are displayed (from https://pandas.pydata.org/pandas-docs/stable/options.html)
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) # Read csv file and assigns headers to columns
 
+print("The data contained in the Iris Data Set is as follows: ")
+print(df) # Prints the Iris Data Set
+
 print(df.head(5)) # Prints first 5 rows
 print(df.tail(5)) # prints last 5 rows
 print("Number of rows and columns: ", df.shape) 
