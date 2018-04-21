@@ -9,6 +9,8 @@
 import pandas as pd
 
 pd.options.display.max_rows = 999 # Set max rows to 999 to ensure all rows are displayed (from https://pandas.pydata.org/pandas-docs/stable/options.html)
+pd.options.display.max_columns = 100 # Set max columns to 100 to ensure all data is shown for describe() function
+
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) # Read csv file and assigns headers to columns
 
 print("The data contained in the Iris Data Set is as follows: ")
@@ -40,6 +42,9 @@ print(virginica.describe()) # Prints summary statistics for the virginica subset
 
 print("Using groupby: ")
 print(df.groupby(by='Class').describe())
+
+
+
 
 import matplotlib.pyplot as plt
 
