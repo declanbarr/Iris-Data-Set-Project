@@ -29,17 +29,13 @@ print("Summary statistics for entire dataset: ")
 print(df.describe()) # Prints summary statistics (includes the count, mean, standard deviation, min, Q1, Q2, Q3 and Q4)
 
 print("Summary statistics for each class of flower: ")
-print(df.groupby(by='Class').describe())
+print(df.groupby(by='Class').describe()) # Prints summary statistics by class
 
 setosa = (df.iloc[0:50]) # Assigns the subset from rows 0 to 49 to setosa
 
 versicolor = (df.iloc[50:100]) # Assigns the subset from rows 50 to 99 to versicolor
 
 virginica = (df.iloc[100:150]) # Assigns the subset from rows 100 to 149 to virginica
-
-
-
-
 
 
 import matplotlib.pyplot as plt
