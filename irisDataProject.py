@@ -37,14 +37,23 @@ print(virginica.describe()) # Prints summary statistics for the virginica subset
 
 import matplotlib.pyplot as plt
 
-df.boxplot(column='Petal Length',by='Class') # Produces boxplot for Petals lengths
-plt.show()
+# Boxplots
 df.boxplot() # Produces boxplot for entire data set (produces outlier data points for Sepal Width)
 plt.show()
+df.boxplot(column='Sepal Length',by='Class') # Produces boxplot for Sepal Length
+plt.show()
+df.boxplot(column='Sepal Width',by='Class') # Produces boxplot for Sepal Width
+plt.show()
+df.boxplot(column='Petal Length',by='Class') # Produces boxplot for Petal Length
+plt.show()
+df.boxplot(column='Petal Width',by='Class') # Produces boxplot for Petal Width
+plt.show()
+
 
 df.plot.hist()
 
 # Pairplot
+
 import seaborn as sns
 g = sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the different species coloured differently
 
