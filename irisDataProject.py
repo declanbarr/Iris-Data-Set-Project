@@ -31,6 +31,10 @@ print(df.describe()) # Prints summary statistics (includes the count, mean, stan
 print("Summary statistics for each class of flower: ")
 print(df.groupby(by='Class').describe()) # Prints summary statistics by class
 
+print("The variance for each attribute of each class of flower is: ")
+print(df.groupby(by='Class').var())
+
+"""
 setosa = (df.iloc[0:50]) # Assigns the subset from rows 0 to 49 to setosa
 
 versicolor = (df.iloc[50:100]) # Assigns the subset from rows 50 to 99 to versicolor
@@ -66,4 +70,4 @@ plt.show()
 import seaborn as sns
 g = sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the different species coloured differently
 
-plt.show() # Shows the pairplot created
+plt.show() # Shows the pairplot created"""
