@@ -34,6 +34,8 @@ virginica = (df.iloc[100:150]) # Assigns the subset from rows 100 to 149 to virg
 print("Summary statistics for Iris virginica: ")
 print(virginica.describe()) # Prints summary statistics for the virginica subset
 
+print("Using groupby: ")
+print(df.groupby(by='Class').describe())
 
 import matplotlib.pyplot as plt
 
@@ -60,7 +62,6 @@ virginica.plot.hist(title='Histogram for Iris Virginica') # Creates a histogram 
 plt.show()
 
 # Pairplot
-
 import seaborn as sns
 g = sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the different species coloured differently
 
