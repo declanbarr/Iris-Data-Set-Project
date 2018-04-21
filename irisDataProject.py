@@ -13,17 +13,15 @@ pd.options.display.max_columns = 100 # Set max columns to 100 to ensure all data
 
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) # Read csv file and assigns headers to columns
 
-print("The data contained in the Iris Data Set is as follows: ")
+print("The data contained in the Iris Data Set are as follows: ")
 print(df) # Prints the Iris Data Set
 
+print("The first 5 rows of the Iris Data Set are as follows: ")
 print(df.head(5)) # Prints first 5 rows
+print("The last 5 rows of the Iris Data Set are as follows: ")
 print(df.tail(5)) # prints last 5 rows
-print("Number of rows and columns: ", df.shape) 
 
-setosaSepalLength = df.iloc[0:50,[0]] # Assigns the subset from rows 0 to 49 of column 0 to setosaSepalLength
-print("Minimum value: ", setosaSepalLength.min()) # Prints the minimum value of the setosaSepalLength subset
-print("Maximum value: ", setosaSepalLength.max()) # Prints the maximum value of the setosaSepalLength subset
-print("Mean value: ", setosaSepalLength.mean()) # Prints the mean value of the setosaSepalLenght subset
+print("Number of rows and columns: ", df.shape) 
 
 print("Summary statistics for entire dataset: ") 
 print(df.describe()) # Prints summary statistics (includes the count, mean, standard deviation, min, Q1, Q2, Q3 and Q4)
