@@ -35,22 +35,17 @@ print("Summary statistics for Iris virginica: ")
 print(virginica.describe()) # Prints summary statistics for the virginica subset
 
 
+import matplotlib.pyplot as plt
+
+df.boxplot(column='Petal Length',by='Class')
+plt.show()
+df.boxplot() # Produces boxplot for entire data set (produces outlier data points for Sepal Width)
+plt.show()
 
 df.plot.hist()
 
 # Pairplot
 import seaborn as sns
 g = sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the different species coloured differently
-import matplotlib.pyplot as plt
+
 plt.show() # Shows the pairplot created
-
-# Adapted from https://python-graph-gallery.com/30-basic-boxplot-with-seaborn/
-sns.boxplot( y=df["Sepal Length"], x =df["Class"] ) 
-plt.show()
-sns.boxplot( y=df["Sepal Width"], x =df["Class"] ) 
-plt.show()
-sns.boxplot( y=df["Petal Length"], x =df["Class"] ) 
-plt.show()
-sns.boxplot( y=df["Petal Width"], x =df["Class"] ) 
-plt.show()
-
