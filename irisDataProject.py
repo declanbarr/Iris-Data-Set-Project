@@ -39,18 +39,18 @@ import matplotlib.pyplot as plt
 
 # Boxplots
 df.boxplot() # Produces boxplot for entire data set (produces outlier data points for Sepal Width)
-plt.show()
+plt.show() # Shows the boxplot created for entire data set
 df.boxplot(column='Sepal Length',by='Class') # Produces boxplot for Sepal Length
-plt.show()
+plt.show() # Shows the boxplot created for Sepal Length
 df.boxplot(column='Sepal Width',by='Class') # Produces boxplot for Sepal Width
-plt.show()
+plt.show() # Shows the boxplot created Sepal Width
 df.boxplot(column='Petal Length',by='Class') # Produces boxplot for Petal Length
-plt.show()
+plt.show() # Shows the boxplot created for Petal Length
 df.boxplot(column='Petal Width',by='Class') # Produces boxplot for Petal Width
-plt.show()
+plt.show() # Shows the boxplot created for Petal Width
 
-
-df.plot.hist()
+# Histogram
+df.plot.hist() # Creates a histogram for the entire dataset
 
 # Pairplot
 
