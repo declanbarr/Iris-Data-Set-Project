@@ -72,6 +72,6 @@ plt.show()
 
 # Pairplot
 import seaborn as sns
-g = sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the different species coloured differently
+sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the different species coloured differently
 
 plt.show() # Shows the pairplot created"""
