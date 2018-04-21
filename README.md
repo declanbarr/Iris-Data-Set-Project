@@ -122,7 +122,7 @@ Output
 148           6.2          3.4           5.4          2.3  Iris-virginica
 149           5.9          3.0           5.1          1.8  Iris-virginica
 ```
-
+(Switched to using seaborn to display boxplots as pandas was combining multiple boxplots into one)
 
 #### References
 [1] Wikipedia. Iris flower data set
