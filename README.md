@@ -207,6 +207,7 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
         * Is this what machine learning does? 
 * Produce graphs, see http://www.statisticshowto.com/types-graphs/#segmentedbartypes
 
+
 * Reference other peoples interesing analyses of the data set
     * Perform LDA on data set - show before and after pictures to illustrate how LDA has improved the separation of the data points (these pictures are to be added to summarise investigations below
     * PCA
