@@ -37,7 +37,7 @@ print(virginica.describe()) # Prints summary statistics for the virginica subset
 
 import matplotlib.pyplot as plt
 
-df.boxplot(column='Petal Length',by='Class')
+df.boxplot(column='Petal Length',by='Class') # Produces boxplot for Petals lengths
 plt.show()
 df.boxplot() # Produces boxplot for entire data set (produces outlier data points for Sepal Width)
 plt.show()
