@@ -78,7 +78,7 @@ Linear discriminant analysis can only be used on the iris data set when the spec
 
 This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). The python script that I wrote to investigate the data set is contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
 
-The dataset can be read using the "read" function which is a part of the Pandas library. The Pandas library is a free to use....
+List libraries used
 
 (What is a dataframe)
 The following code can be used to create a dataframe from the Iris flower data set and assign headers to the colums:
@@ -89,39 +89,98 @@ The following code can be used to create a dataframe from the Iris flower data s
 
 (Try to produce box plot for different flowers for the same attribute)
 
-Input
-```python
-import pandas as pd
 
-df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) 
-```
 
-Input
-```python
-print(df.head(5))
-```
+
 Output
 ```
-   Sepal Length  Sepal Width  Petal Length  Petal Width        Class
+
+```
+
+All values in this write up will be given to 1 decimal place
+
+
+The Iris flower data set has the following dimensions:
+Output
+```
+(150, 5)
+```
+The first and last 5 rows of the data set are:
+
+Output
+```
+Sepal Length  Sepal Width  Petal Length  Petal Width        Class
 0           5.1          3.5           1.4          0.2  Iris-setosa
 1           4.9          3.0           1.4          0.2  Iris-setosa
 2           4.7          3.2           1.3          0.2  Iris-setosa
 3           4.6          3.1           1.5          0.2  Iris-setosa
 4           5.0          3.6           1.4          0.2  Iris-setosa
 ```
-Input
-```python
-print(df.tail(5))
-```
+and
 Output
 ```
-     Sepal Length  Sepal Width  Petal Length  Petal Width           Class
+Sepal Length  Sepal Width  Petal Length  Petal Width           Class
 145           6.7          3.0           5.2          2.3  Iris-virginica
 146           6.3          2.5           5.0          1.9  Iris-virginica
 147           6.5          3.0           5.2          2.0  Iris-virginica
 148           6.2          3.4           5.4          2.3  Iris-virginica
 149           5.9          3.0           5.1          1.8  Iris-virginica
+
 ```
+
+We can see that the first 4 columns contain the Sepal length, Sepal width, Petal length and Petal width. The last column contains the species or class of Iris flower.
+
+The summary statisitics for the entire data set are:
+Output
+```
+       Sepal Length  Sepal Width  Petal Length  Petal Width
+count    150.000000   150.000000    150.000000   150.000000
+mean       5.843333     3.054000      3.758667     1.198667
+std        0.828066     0.433594      1.764420     0.763161
+min        4.300000     2.000000      1.000000     0.100000
+25%        5.100000     2.800000      1.600000     0.300000
+50%        5.800000     3.000000      4.350000     1.300000
+75%        6.400000     3.300000      5.100000     1.800000
+max        7.900000     4.400000      6.900000     2.500000
+```
+Petal width has the lowest value at 0.1 cm and sepal length has the highest value at 7.9 cm.
+
+The sepal length has the highest mean at 5.8 cm and the petal length has the lowest at 1.2 cm. The median value can also be seen here as it is the 50% value. This is also highest for sepal length at 5.8 cm and lowest for petal width at 1.3 cm. For sepal length and sepal width the mean and median values are quite similar with values of 5.8 cm and 5.8 cm for sepal length and 3.1 cm (3.05 cm correct to 2 d.p.) and 3.0 cm for sepal width, respectively. However, the mean and median values for petal length and petal width differ from each other with values of 3.8 cm and 4.4 cm for petal length and 1.2 cm and 1.3 cm for petal width. This suggests that the data for petal length and width is skewed towards the lower values.
+
+The petal length has the highest standard deviation at 1.8 cm and sepal width has the lowest at 0.4 cm. 
+
+<p align="center">
+  <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/boxPlotIrisDataSet.png">
+  <br><b>Boxplot for Iris flower data set</b><br>
+  
+From the boxplot above the large and small spreads can be seen for petal length and sepal width, respectively,. The range of values (the distance between maximum and minimum values) as well as the interquartile range (the distance between the 75% and 25% values) are largest for petal length and smallest for sepal width, just as the standard deviation was found to be from the statistical summary above. The petal length therefore has the highest spread of data and sepal width has the lowest.
+
+<p align="center">
+  <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/histogramIrisDataSet.png">
+  <br><b>Histogram for Iris flower data set</b><br>
+  
+From the histogram above we can also see the spread of data with petal length again having the highest value. However, we can also see that the data is quite unevenly distributed. There a two clusters of data in the histogram for petal length. One from ~1 cm to ~2 cm and the other from ~3 cm to ~7 cm. This information could not be seen from the boxplots above. Petal width also appears to have an uneven distribution, with a cluster from around 0 to 0.5 cm and another from ~1 cm to ~3 cm. These clusters may represent differnt classes of flowers.
+
+<p align="center">
+  <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/boxplotSepalLength.png">
+  <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/boxplotSepalWidth.png">
+  <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/boxPlotPetalLength.png">
+  <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/boxPlotPetalWidth.png">
+  <br><b>Boxplots for the different attributes in the Iris flower data set</b><br>
+
+The boxplots above show that the clusters for petal length and width that could be seen in the histogram above represent the Iris setosa and both of Iris virginica and Iris versicolor. It is therefore possible to distinguish Iris setosa from the other two classes of flower using only one attribute; either petal length or width. It is not possible to distinguish Iris versicolor from Iris virginica using only one attribut.
+
+<p align="center">
+  <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataSetPairplot.png">
+  <br><b>Pairplot for the different attributes in the Iris flower data set</b><br>
+
+In the above pairplot we can see scatter plots for one attribute against another. Where an attribute is plotted against itself a histogram is produced. In almost all cases the Iris setosa is easily separable from the other two classes (except when sepal width is plotted against sepal length).
+
+
+(Add analyses done by others on this)
+
+
+
 (Switched to using seaborn to display boxplots as pandas was combining multiple boxplots into one)
 
 #### References
@@ -145,7 +204,8 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
 
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
-##### Completion date: ~3rd April 2018~ ~12th April 2018~ 19th April 2018 (using contingency week here)(To be completed in parallel with "Summarise the Data Set")
+##### Completion date: ~3rd April 2018~ ~12th April 2018~ ~19th April 2018~ (using contingency week here)(To be completed in parallel with "Summarise the Data Set")
+##### To be tidied up before completion data of 29th April 2018 - No major new topics to be introduced
 * Read wikipedia article on Iris Flower Data Set
     * ~Introduction~
     * Use of the data set
@@ -186,16 +246,16 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
       * ~Max~
    * Average
       * ~Mean~
-      * Mode 
+      * ~Mode~ (not needed for this project)  
       * ~Median~
    * Spread
-      * Variance
+      * ~Variance~
       * ~Standard Deviation~
-      * IQR (Boxplot to be used to display IQR)
-      * Range (Boxplot to be used to display range)
-* Boxplots - produce boxplots comparing the same attribute across different species
-* Read https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/r/iris_plots/
-    * Scatter plots of sw, sl, pl and pw. See https://www.kaggle.com/mathewnik90/machinelearning-helloworld-with-iris-full-analysis for pair plots
+      * ~IQR (Boxplot to be used to display IQR)~
+      * ~Range (Boxplot to be used to display range)~
+* ~Boxplots - produce boxplots comparing the same attribute across different species~
+* ~Read https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/r/iris_plots/~
+    * S~catter plots of sw, sl, pl and pw. See https://www.kaggle.com/mathewnik90/machinelearning-helloworld-with-iris-full-analysis for pair plots~
     * Can relationships be made between sizes eg
         * sl/sw and plot against pl/pw?
         * sw times sl plotted against pw times pl?
@@ -205,7 +265,7 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
         * multiply or divide a feature by a factor
         * etc
         * Is this what machine learning does? 
-* Produce graphs, see http://www.statisticshowto.com/types-graphs/#segmentedbartypes
+* ~Produce graphs, see http://www.statisticshowto.com/types-graphs/#segmentedbartypes~
 
 
 * Reference other peoples interesing analyses of the data set
@@ -216,12 +276,13 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
  
 * Glossary of terms - provide a link from each term to a definition either at the bottom of the readme or to a separte file in the project folder/ provide link to wikipedia
 #### Summarise investigations 
+##### Completion date: ~21st April 2018~ 28th April 2018 (moved back due to use of contingency week)
 
 * How to download dataset
 * How to run code
 
 
-##### Completion date: ~21st April 2018~ 28th April 2018 (moved back due to use of contingency week)
+
 
 #### ~Contingency week~
 ##### Completion date: 29th April 2018
