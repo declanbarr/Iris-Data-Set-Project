@@ -62,7 +62,7 @@ df.boxplot(column='Petal Width',by='Class') # Produces boxplot for Petal Width
 plt.show() # Shows the boxplot created for Petal Width
 
 # Histogram
-df.plot.hist(title='Histogram for entire data set', bins=20) # Creates a histogram for the entire dataset
+df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5) # Creates a histogram for the entire dataset
 plt.show()
 setosa.plot.hist(title='Histogram for Iris Setosa') # Creates a histogram for Iris Setosa
 plt.show()
