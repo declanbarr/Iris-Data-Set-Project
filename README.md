@@ -92,22 +92,14 @@ The following code can be used to create a dataframe from the Iris flower data s
 
 
 
-Output
-```
-
-```
-
 All values in this write up will be given to 1 decimal place
 
 
 The Iris flower data set has the following dimensions:
-Output
 ```
 (150, 5)
 ```
 The first and last 5 rows of the data set are:
-
-Output
 ```
 Sepal Length  Sepal Width  Petal Length  Petal Width        Class
 0           5.1          3.5           1.4          0.2  Iris-setosa
@@ -117,7 +109,6 @@ Sepal Length  Sepal Width  Petal Length  Petal Width        Class
 4           5.0          3.6           1.4          0.2  Iris-setosa
 ```
 and
-Output
 ```
 Sepal Length  Sepal Width  Petal Length  Petal Width           Class
 145           6.7          3.0           5.2          2.3  Iris-virginica
@@ -131,7 +122,6 @@ Sepal Length  Sepal Width  Petal Length  Petal Width           Class
 We can see that the first 4 columns contain the Sepal length, Sepal width, Petal length and Petal width. The last column contains the species or class of Iris flower.
 
 The summary statisitics for the entire data set are:
-Output
 ```
        Sepal Length  Sepal Width  Petal Length  Petal Width
 count    150.000000   150.000000    150.000000   150.000000
