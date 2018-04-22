@@ -51,6 +51,7 @@ import matplotlib.pyplot as plt
 # Boxplots
 df.boxplot() # Produces boxplot for entire data set (produces outlier data points for Sepal Width)
 plt.show() # Shows the boxplot created for entire data set
+
 df.boxplot(column='Sepal Length',by='Class') # Produces boxplot for Sepal Length
 plt.show() # Shows the boxplot created for Sepal Length
 df.boxplot(column='Sepal Width',by='Class') # Produces boxplot for Sepal Width
@@ -61,7 +62,7 @@ df.boxplot(column='Petal Width',by='Class') # Produces boxplot for Petal Width
 plt.show() # Shows the boxplot created for Petal Width
 
 # Histogram
-df.plot.hist(title='Histogram for entire data set') # Creates a histogram for the entire dataset
+df.plot.hist(title='Histogram for entire data set', bins=20) # Creates a histogram for the entire dataset
 plt.show()
 setosa.plot.hist(title='Histogram for Iris Setosa') # Creates a histogram for Iris Setosa
 plt.show()
@@ -70,8 +71,9 @@ plt.show()
 virginica.plot.hist(title='Histogram for Iris Virginica') # Creates a histogram for Iris Virginica
 plt.show()
 
+
 # Pairplot
 import seaborn as sns
 sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the different species coloured differently
 
-plt.show() # Shows the pairplot created"""
+plt.show() # Shows the pairplot created
