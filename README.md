@@ -101,7 +101,7 @@ The Iris flower data set has the following dimensions:
 ```
 The first and last 5 rows of the data set are:
 ```
-Sepal Length  Sepal Width  Petal Length  Petal Width        Class
+   Sepal Length  Sepal Width  Petal Length  Petal Width        Class
 0           5.1          3.5           1.4          0.2  Iris-setosa
 1           4.9          3.0           1.4          0.2  Iris-setosa
 2           4.7          3.2           1.3          0.2  Iris-setosa
@@ -110,7 +110,7 @@ Sepal Length  Sepal Width  Petal Length  Petal Width        Class
 ```
 and
 ```
-Sepal Length  Sepal Width  Petal Length  Petal Width           Class
+     Sepal Length  Sepal Width  Petal Length  Petal Width           Class
 145           6.7          3.0           5.2          2.3  Iris-virginica
 146           6.3          2.5           5.0          1.9  Iris-virginica
 147           6.5          3.0           5.2          2.0  Iris-virginica
