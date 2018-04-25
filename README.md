@@ -10,7 +10,7 @@
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Ronald%20Fischer.jpg">
   <br><b>Ronald Fisher</b><br>
   
-The Iris Flower Data Set is a data set collected by Edgar Anderson. It consists of 50 samples for each of Iris setosa, Iris virginica and Iris versicolor; three related species of Iris flower. It is a multivariate data set meaning there is more than one variable. There are a total of 150 records under 5 attributes: petal length, petal width, sepal length, sepal width and class. [1]
+The Iris Flower Data Set was originally collected by Edgar Anderson in 1936. It consists of 50 samples for each of Iris setosa, Iris virginica and Iris versicolor; three related species of Iris flower. It is a multivariate data set meaning there is more than one variable. There are a total of 150 records under 5 attributes: petal length, petal width, sepal length, sepal width and class. [1]
 
 <p align="center">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Iris%20setosa.jpg">
@@ -23,11 +23,7 @@ The Iris Flower Data Set is a data set collected by Edgar Anderson. It consists 
 
 Ronald Fischer performed a Linear Discriminant on the data set which he detailed in his 1936 paper "The use of multiple measurements in taxonomic problems"[2]. The Linear Disciminant works on only 2 classes. The method was later developed into the Linear Discriminant analysis by C. R. Rao in 1948 "The utilization of multiple measurements in problems of biological classification"[3,4] This enables the analysis of more than two classes.
 
-
-[https://archive.ics.uci.edu/ml/datasets/iris]
-* Includes download of dataset (provide instructions?)
-* Explanation of the data set
-* References to read (see project plan)
+The Iris data set is used within the machine learning community to test out algorithms and visualisations. https://towardsdatascience.com/the-journey-of-a-machine-learning-model-from-building-to-retraining-fe3a37c32307. 
 
 
 #### Linear discriminant analysis
@@ -71,23 +67,50 @@ Linear discriminant analysis can only be used on the iris data set when the spec
 
 ### Summary of Investigations
 
-(need to write in what version of python, anaconda etc)
+For this project I used Anaconda version 5.0.1 and Python version 3.6.3. Anaconda is a free and open source distribution of Python used for data science (https://en.wikipedia.org/wiki/Anaconda_(Python_distribution). Anaconda provides a number of libraries. For this project I will be using the following libraries: Pandas, Seaborn and Matplotlib.
+
+This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). It is also included in this repository in the data folder as [iris.csv](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/data/iris.csv).The python script that I wrote to investigate the data set is also contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
+
+To run this script simply download it to a folder and in the same folder have folder named data with this iris data set inside. It must be named iris.csv in order to be read correctly. In the terminal change working directory to the folder containing the python script and data folder. Then type "python irisDataProject.py". The following will then within the terminal:   
+   * Dimensions of data set
+    * First 5 rows
+    * Last 5 rows
+    * All 150 rows
+    * Summary statistics for entire data set
+        * Count
+        * Mean
+        * STD (Standar Deviation)
+        * Min
+        * 25 %
+        * 50 %
+        * 75 %
+        * Max
+    * Summary statistics for each class of flower
+    * The variance for each attribute of the entire data set
+    * The Variance for each attribute for each class of Iris flower
+
+Then a number of graphs will show:
+    * Boxplots for
+        * entire data set
+        * each attribute
+    * Histogram for
+        * entire data set
+        * each class
+    * Pairplots
+        * each attribute
+    
+    
 (need to write what investigating a data set entails and how python can be used to do it)
     * what a library is
     * how to import etc
 
-This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). The python script that I wrote to investigate the data set is contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
 
-List libraries used
 
-(What is a dataframe)
-The following code can be used to create a dataframe from the Iris flower data set and assign headers to the colums:
 
 (reference to pandas cheat sheet)
 
 (Box plot producing outlier data points)
 
-(Try to produce box plot for different flowers for the same attribute)
 
 
 
@@ -168,6 +191,7 @@ In the above pairplot we can see scatter plots for one attribute against another
 
 
 (Add analyses done by others on this)
+http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html
 
 
 
@@ -268,8 +292,7 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
 #### Summarise investigations 
 ##### Completion date: ~21st April 2018~ 28th April 2018 (moved back due to use of contingency week)
 
-* How to download dataset
-* How to run code
+
 
 
 
