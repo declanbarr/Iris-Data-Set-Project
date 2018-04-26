@@ -64,6 +64,44 @@ Linear discriminant analysis can only be used on the iris data set when the spec
 
 
 
+### Investigating a data set
+
+A range of tools can be used to help identify patterns in a data set such as visualisation and statistical analysis. (http://ngss.nsta.org/Practices.aspx?id=4) 
+
+Some examples of data visualisations are histograms, boxplots and scatterplots. 
+
+Histograms are used to represent the distribution of numerical data. (https://en.wikipedia.org/wiki/Histogram). They enable a data set to be investigated for outliers and for skewness. https://statistics.laerd.com/statistical-guides/understanding-histograms.php.
+
+Box plots are also used to represent distribution. Box plots represent the five number summary: minimum, first quartile, second quartile or median, third quartile and maximum. http://www.physics.csbsju.edu/stats/box2.html
+
+Scatter plots use dots to represent individual data points. They are useful to see if there is a relationship between two variables. http://www.statisticshowto.com/probability-and-statistics/regression-analysis/scatter-plot-chart/
+
+(Add pictures of histograms, boxplots and scatterplots)
+
+Some basic statistical analysis can involve calculating the average and calculating the spread of the data. Mean and median are two ways of calculating the average of a data set. Mean involves summing all values and then dividing by the number of values. Median is the middle data point. The mean can be skewed by outliers https://www.skillsyouneed.com/num/simple-statistical-analysis.html
+Spread can be measured by the standard deviation, variance or range. The range is the simplest measure of spread and is simply the maximum minus the minimum value. Variance is the sum of the squares of the distance of each value from the mean divided by the number of values. The standard deviation is the square root of the variance. https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation. 
+
+
+
+Python can be used to investigate a data set by enabling the data to be visualised as well as carrying out the statisical analysis. This can be done by the use of libraries which need to be imported, such as pandas, matplotlib and seaborn. For example the a statisical summary of the data set can be given by typing the following:
+
+(need explanation on data frame)
+
+
+Input:
+```Python
+import pandas
+df.describe()
+```
+This will give the count (number of rows), mean, standard deviation, min, 25 % (or Q1), 50 % (or Q2/median), 75% (or Q3) and maximum.
+
+The following code will allow the data to be visualised by providing a histogram:
+
+Input:
+```Python
+import pandas
+df.plot.hist()
+```
 
 ### Summary of Investigations
 
