@@ -32,6 +32,7 @@ The data set contains two clusters. One cluster contains Iris setosa and the oth
 ![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Ldaseparation.png)[5]
 
 Linear discriminant analysis (LDA) is a method for maximising the separability of known categories. In LDA information from two variables are combined into a single axis in a way that maximizes the separation of the two categories, see pic above. The new axis is created according to two critera which are considered simultaneously:
+
 1. Maximize the distance between means (mu)
 2. Minimize the variation (s^2) within each category
 
@@ -56,19 +57,6 @@ Principal component analysis (PCA), like LDA is a method for reducing dimensions
 Where there are only 2 axes, the axis with the most separtion is labelled PC1 and the one with the lowest is labelled PC2. For the Iris data set there will be 4 axis as there is 4 features. Therefore, PC1 will have the highest variation and PC4 will have the lowest.
 
 LDA is a supervised technique whereas PCA is unsupervised. 
-
-#### Non linear principal component analysis
-
-#### Support Vector Machines
-
-#### cluster analysis
-
-#### data mining
-
-#### nonlinear branching principal component
-
-#### metro map
-
 
 
 ### Investigating a data set
@@ -122,33 +110,34 @@ For this project I used Anaconda version 5.0.1 and Python version 3.6.3. Anacond
 This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). It is also included in this repository in the folder [data](https://github.com/declanbarr/Iris-Data-Set-Project/tree/master/data) as [iris.csv](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/data/iris.csv).The python script that I wrote to investigate the data set is also contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
 
 To run this script simply download it to a folder and in the same folder have folder named data with this iris data set inside. It must be named iris.csv in order to be read correctly. In the terminal change working directory to the folder containing the python script and data folder. Then type "python irisDataProject.py". The following will then show within the terminal:   
-    * Dimensions of data set
-    * First 5 rows
-    * Last 5 rows
-    * All 150 rows
-    * Summary statistics for entire data set
-        * Count
-        * Mean
-        * STD (Standar Deviation)
-        * Min
-        * 25 %
-        * 50 %
-        * 75 %
-        * Max
-    * Summary statistics for each class of flower
-    * The variance for each attribute of the entire data set
-    * The Variance for each attribute for each class of Iris flower
+
+* Dimensions of data set
+* First 5 rows
+* Last 5 rows
+* All 150 rows
+* Summary statistics for entire data set
+    * Count
+    * Mean
+    * STD (Standar Deviation)
+    * Min
+    * 25 %
+    * 50 %
+    * 75 %
+    * Max
+* Summary statistics for each class of flower
+* The variance for each attribute of the entire data set
+* The Variance for each attribute for each class of Iris flower
 
 Then a number of graphs will show:
-    * Boxplots for
-        * entire data set
-        * each attribute
-    * Histogram for
-        * entire data set
-        * each class
-    * Pairplots
-        * each attribute
 
+* Boxplots for
+    * entire data set
+    * each attribute
+* Histogram for
+    * entire data set
+    * each class
+* Pairplots
+    * each attribute
 
 
 All values in this write up will be given to 1 decimal place.
@@ -254,7 +243,6 @@ The boxplots above show that the clusters for petal length and width that could 
 
 We can also see that for sepal length, petal length and petal width that the min, Q1, median, Q3 and max increase going from Iris setosa to Iris versicolor to Iris Virginica. From the summary statistics above this is also true for the mean and standard deviation.
 
-
 <p align="center">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataSetPairplot.png">
   <br><b>Pairplot for the different attributes in the Iris flower data set</b><br>
@@ -268,9 +256,10 @@ There appears to be a positive correlation between petal width vs petal length, 
 #### Pearson correlation coefficient
 
 Pearson correlation coefficient is a measure of the linear correlation between two variables where +1 is a positive correlation, -1 is a negative correltion and 0 is no correltion. See page [Simple analysis of Iris Data Set](https://www.kaggle.com/danalexandru/simple-analysis-of-iris-dataset) for a PCC analysis carried out on the Iris data set. It was found that there is a postive correltion between petal length, petal width and sepal length. The following are the results of the PCC analysis:
-    * Petal width vs petal length = 0.96
-    * Petal length and sepal length = 0.87
-    * Petal width and sepal length = 0.81
+    
+* Petal width vs petal length = 0.96
+* Petal length and sepal length = 0.87
+* Petal width and sepal length = 0.81
     
 The highest correlation is with petal width and petal length.
 
@@ -311,12 +300,206 @@ pca = PCA(n_components=2)
 ```python
 lda = LinearDiscriminantAnalysis(n_components=2)
 ```
-The above shows how PCA and LDA are implemented using scikit-learn.
+The above shows how PCA and LDA are implemented using scikit-learn. For both PCA and LDA their components were set to 2. This means that for LDA there was a LD1 axis and a LD2 axis and for PCA there was a PC1 and PC2 axis.
 
 
 
+### My experiences developing the code for this project
 
-(Switched to using seaborn to display boxplots as pandas was combining multiple boxplots into one)
+The following is a write up on the problems that I encountered while trying to create the code to analyse the Iris data set and how I was able to solve these problems including the websites that I researched.
+
+I initially tried to read the data using numpy. I had found this on the numpy cheat sheet. (https://www.dataquest.io/blog/numpy-cheat-sheet/)
+In:
+```python
+import numpy as np
+dataSet = np.genfromtxt('file.csv',delimiter=',')
+
+print(dataSet)
+```
+Out:
+```
+[[ 5.1  3.5  1.4  0.2  nan]
+ [ 4.9  3.   1.4  0.2  nan]
+ [ 4.7  3.2  1.3  0.2  nan]
+ [ 4.6  3.1  1.5  0.2  nan]
+ [ 5.   3.6  1.4  0.2  nan]
+ ......
+```
+(First five rows shown only)
+
+
+
+The output from this didn't include the class attribute as this is not a number. I then found that I could read the csv file using the pandas library(https://www.kaggle.com/ashokdavas/iris-data-analysis-pandas-numpy):
+
+```python
+import pandas as pd
+dataSet = pd.read_csv('data/iris.csv')
+print(dataSet)
+```
+Out:
+```
+     5.1  3.5  1.4  0.2     Iris-setosa
+0    4.9  3.0  1.4  0.2     Iris-setosa
+1    4.7  3.2  1.3  0.2     Iris-setosa
+2    4.6  3.1  1.5  0.2     Iris-setosa
+3    5.0  3.6  1.4  0.2     Iris-setosa
+.....
+```
+(First five rows shown only)
+
+The problem here was that the first row was being read as the header.
+
+The following code was outputing the mean for each attribute for the entire dataset:
+
+```python
+print(np.mean(dataSet, axis=0))
+```
+I wanted to also be able to get the mean for each species of Iris flower.
+
+For the headings I initially tried to concatenate an array containing the headings to the dataframe. Then I tried the following code:
+
+In:
+```python
+dataSet = pd.read_csv('data/iris.csv', index_col=False )
+```
+Neither of these worked.
+
+I then found that I could assign headers to the dataframe by using the following(https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60):
+
+
+In:
+```python
+df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] )
+```
+Out:
+```
+     Sepal Length  Sepal Width  Petal Length  Petal Width           Class
+0             5.1          3.5           1.4          0.2     Iris-setosa
+1             4.9          3.0           1.4          0.2     Iris-setosa
+2             4.7          3.2           1.3          0.2     Iris-setosa
+3             4.6          3.1           1.5          0.2     Iris-setosa
+4             5.0          3.6           1.4          0.2     Iris-setosa
+```
+(First 5 rows shown only)
+
+This assigned the correct index number to the rows and also added names to the attributes which made chosing by attriubte easier. One problem which I chose not to try and fix at this point was that only 60 rows were shown - rows 0 to 29 and 130 to 149. I was able to fix this at a later date.
+
+I then had the problem of trying to select the rows of a particular class and columns or attributes. I started with the iloc function from the Pandas library which I found on the Pandas cheat sheet(https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
+
+In:
+```python
+print("Rows 1 to 50 are:", df.iloc[0:50])
+```
+This printed the rows for the Iris setosa class of iris flower.
+
+In:
+```python
+print("Rows 1 to 50 of Sepal length are:", df.iloc[0:50,[0]])
+```
+This printed the sepal length rows for Iris setosa.
+
+I was then able to calculate the mean of this attribute for this particular class using:
+
+In:
+```python
+print("Mean of Sepal length for rows 1 to 50 is:", np.mean(df.iloc[0:50, [0]]))
+```
+Out:
+```
+Mean of Sepal length for rows 1 to 50 is: Sepal Length    5.006
+```
+I then attempted to create a number of functions and loops that would produce min, max, mean etc for the different attributes and differnt classes. However, I later found on the pandas cheat sheet that I could easily produce summary statistics using the pandas describe function.
+
+In:
+```python
+df.describe()
+```
+Out:
+```
+       Sepal Length  Sepal Width  Petal Length  Petal Width
+count    150.000000   150.000000    150.000000   150.000000
+mean       5.843333     3.054000      3.758667     1.198667
+std        0.828066     0.433594      1.764420     0.763161
+min        4.300000     2.000000      1.000000     0.100000
+25%        5.100000     2.800000      1.600000     0.300000
+50%        5.800000     3.000000      4.350000     1.300000
+75%        6.400000     3.300000      5.100000     1.800000
+max        7.900000     4.400000      6.900000     2.500000
+```
+
+I was also able to print summary statistics for each class of Iris using the df.iloc function. However, I later discovered from the pandas cheatsheet that I could use the groupby function as follows
+In:
+```python
+print(df.groupby(by='Class').describe())
+```
+This produced summary statistics for each class of flower. 
+
+I was able to visualise the data using the following:
+
+Pairplots(https://stackoverflow.com/questions/26597116/seaborn-plots-not-showing-up?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa):
+
+In:
+```python
+import seaborn as sns
+g = sns.pairplot(df, hue='Class') # Provides a pairplot of the dataset with the different species coloured differently
+import matplotlib.pyplot as plt
+plt.show() # Shows the pairplot 
+```
+Boxplots(https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.boxplot.html)
+In:
+```python
+df.boxplot()
+```
+Histograms(https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
+In:
+```python
+df.plot.hist()
+```
+
+I then encountered a problem when I tried to create multiple box plots. The problem was that the boxplots were combining into one. Initially I switched to the seaborn library to create box plots. However, I realised that if I used the matplotlib.pyplot.show() function I could create and show a single boxplot then the next wouldn't show until the first was closed.
+
+I was then able to create boxplots which compared a single attribute agains the 3 different classes of flower using the following code:
+In:
+```python
+df.boxplot(column='Sepal Length',by='Class') # Produces boxplot for Sepal Length
+plt.show()
+df.boxplot(column='Sepal Width',by='Class') # Produces boxplot for Sepal Width
+plt.show()
+df.boxplot(column='Petal Length',by='Class') # Produces boxplot for Petal Length
+plt.show()
+df.boxplot(column='Petal Width',by='Class') # Produces boxplot for Petal Width
+plt.show()
+```
+I was unable to easily do the same for histograms. The following website contains an example of how this can be done but it takes over around 30 lines of code to do so:
+[Linear Discriminant Analysis- bit by bit](http://sebastianraschka.com/Articles/2014_python_lda.html)
+
+I was able to compare the different attributes for each class of flower on a histogram using:
+In:
+```python
+setosa = (df.iloc[0:50])
+versicolor = (df.iloc[50:100])
+virginica = (df.iloc[100:150])
+
+....
+
+setosa.plot.hist()
+versicolor.plot.hist()
+virginica.plot.hist()
+```
+I then encountered a problem when I tried to get summary statistics for each class of flower. The entire output was not displaying. This was a similar problem to what I had encountered earlier with all the rows not displaying only in this case it was that all the columns were not displaying. I then found that I could display all the results by using the following code:
+ (https://pandas.pydata.org/pandas-docs/stable/options.html)
+```python
+pd.options.display.max_rows = 999
+pd.options.display.max_columns = 100
+```
+I then discovered that the histogram that I had produced for the entire dataset was not accurately showing the spread of data. This was due to there not being enough bins and due to the fact that some bins where hidden behind others. I found on this website (https://pandas.pydata.org/pandas-docs/stable/visualization.html) that I could increase the number of bins and make them translucent by using the following code:
+
+```python
+df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5)
+```
+
+
+
 
 #### References
 [1] Wikipedia. Iris flower data set
@@ -369,7 +552,7 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
 * Type up summary (This would be best to be done immediatley instead of typing everything up at the end)
     * Find out how to do symbol such as mu
 #### Summarise the data set
-##### Completion date: ~12th April 2018~ 19th April 2018 (using contingency week here)
+##### Completion date: ~12th April 2018~ ~19th April 2018 (using contingency week here)~
 ##### Summarise each investigation as it has been completed
 
 * For each species calculate:
@@ -390,7 +573,7 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
       * ~Range (Boxplot to be used to display range)~
 * ~Boxplots - produce boxplots comparing the same attribute across different species~
 * ~Read https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/r/iris_plots/~
-    * S~catter plots of sw, sl, pl and pw. See https://www.kaggle.com/mathewnik90/machinelearning-helloworld-with-iris-full-analysis for pair plots~
+    * ~Scatter plots of sw, sl, pl and pw. See https://www.kaggle.com/mathewnik90/machinelearning-helloworld-with-iris-full-analysis for pair plots~
     * Can relationships be made between sizes eg
         * sl/sw and plot against pl/pw?
         * sw times sl plotted against pw times pl?
@@ -410,6 +593,7 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
     * 
  
 * Glossary of terms - provide a link from each term to a definition either at the bottom of the readme or to a separte file in the project folder/ provide link to wikipedia
+
 #### Summarise investigations 
 ##### Completion date: ~21st April 2018~ 28th April 2018 (moved back due to use of contingency week)
 
