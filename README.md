@@ -115,7 +115,7 @@ For this project I used Anaconda version 5.0.1 and Python version 3.6.3. Anacond
 This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). It is also included in this repository in the folder [data](https://github.com/declanbarr/Iris-Data-Set-Project/tree/master/data) as [iris.csv](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/data/iris.csv).The python script that I wrote to investigate the data set is also contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
 
 To run this script simply download it to a folder and in the same folder have folder named data with this iris data set inside. It must be named iris.csv in order to be read correctly. In the terminal change working directory to the folder containing the python script and data folder. Then type "python irisDataProject.py". The following will then show within the terminal:   
-   * Dimensions of data set
+    * Dimensions of data set
     * First 5 rows
     * Last 5 rows
     * All 150 rows
@@ -233,7 +233,7 @@ Iris-setosa            50.0  3.418  0.381024  2.3  3.125  3.4  3.675  4.4
 Iris-versicolor        50.0  2.770  0.313798  2.0  2.525  2.8  3.000  3.4
 Iris-virginica         50.0  2.974  0.322497  2.2  2.800  3.0  3.175  3.8
 ```
-
+We can see from above that Iris setosa has a smaller mean, median, standard deviation, minimum and maximum values for petal length, petal width and sepal length. For sepal width it has much larger values.
 
 
 <p align="center">
@@ -245,14 +245,31 @@ Iris-virginica         50.0  2.974  0.322497  2.2  2.800  3.0  3.175  3.8
 
 The boxplots above show that the clusters for petal length and width that could be seen in the histogram above represent the Iris setosa and both of Iris virginica and Iris versicolor. It is therefore possible to distinguish Iris setosa from the other two classes of flower using only one attribute; either petal length or width. It is not possible to distinguish Iris versicolor from Iris virginica using only one attribute.
 
+We can also see that for sepal length, petal length and petal width that the min, Q1, median, Q3 and max increase going from Iris setosa to Iris versicolor to Iris Virginica. From the summary statistics above this is also true for the mean and standard deviation.
+
+
 <p align="center">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataSetPairplot.png">
   <br><b>Pairplot for the different attributes in the Iris flower data set</b><br>
 
 In the above pairplot we can see scatter plots for one attribute against another. Where an attribute is plotted against itself a histogram is produced. We can see in the histograms for petal length and petal width that Iris setosa is easily separable from the other two species just like the boxplots above. In the scatter plots, in almost all cases the Iris setosa is easily separable from the other two classes (except when sepal width is plotted against sepal length).
 
+There appears to be a positive correlation between petal width vs petal length, sepal length vs petal length, and sepal length vs petal width. 
 
-(Add analyses done by others on this)
+### Interesting analyses carried out on the Iris data set
+
+#### Pearson correlation coefficient
+
+Pearson correlation coefficient is a measure of the linear correlation between two variables where +1 is a positive correlation, -1 is a negative correltion and 0 is no correltion. See page [Simple analysis of Iris Data Set](https://www.kaggle.com/danalexandru/simple-analysis-of-iris-dataset) for a PCC analysis carried out on the Iris data set. It was found that there is a postive correltion between petal length, petal width and sepal length. The following are the results of the PCC analysis:
+    * Petal width vs petal length = 0.96
+    * Petal length and sepal length = 0.87
+    * Petal width and sepal length = 0.81
+    
+The highest correlation is with petal width and petal length.
+
+
+
+
 
 
 http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html
