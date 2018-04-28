@@ -83,14 +83,20 @@ Spread can be measured by the standard deviation, variance or range. The range i
 
 
 
-Python can be used to investigate a data set by enabling the data to be visualised as well as carrying out the statisical analysis. This can be done by the use of libraries which need to be imported, such as pandas, matplotlib and seaborn. For example the a statisical summary of the data set can be given by typing the following:
 
-(need explanation on data frame)
-
+Python can be used to investigate a data set by enabling the data to be visualised as well as carrying out the statisical analysis. This can be done by the use of libraries which need to be imported, such as pandas, matplotlib and seaborn. Firstly the data set needs to be read. This can be achieved using the pandas library with the following code:
 
 Input:
 ```Python
 import pandas
+df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"]
+```
+This creates a pandas dataframe called "df" which contains the data from the csv file iris.csv. A data frame is two-dimensional data structure where the data is arranged in rows and columns. (https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm). In this case the columns are assigned the names "Sepal Length", "Sepal Width", "Petal Length", "Petal Width" and "Class". 
+
+The statisical summary of the data set can be given by typing the following:
+
+Input:
+```Python
 df.describe()
 ```
 This will give the count (number of rows), mean, standard deviation, min, 25 % (or Q1), 50 % (or Q2/median), 75% (or Q3) and maximum.
@@ -99,7 +105,6 @@ The following code will allow the data to be visualised by providing a histogram
 
 Input:
 ```Python
-import pandas
 df.plot.hist()
 ```
 
@@ -107,9 +112,9 @@ df.plot.hist()
 
 For this project I used Anaconda version 5.0.1 and Python version 3.6.3. Anaconda is a free and open source distribution of Python used for data science (https://en.wikipedia.org/wiki/Anaconda_(Python_distribution). Anaconda provides a number of libraries. For this project I will be using the following libraries: Pandas, Seaborn and Matplotlib.
 
-This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). It is also included in this repository in the data folder as [iris.csv](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/data/iris.csv).The python script that I wrote to investigate the data set is also contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
+This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). It is also included in this repository in the folder [data](https://github.com/declanbarr/Iris-Data-Set-Project/tree/master/data) as [iris.csv](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/data/iris.csv).The python script that I wrote to investigate the data set is also contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
 
-To run this script simply download it to a folder and in the same folder have folder named data with this iris data set inside. It must be named iris.csv in order to be read correctly. In the terminal change working directory to the folder containing the python script and data folder. Then type "python irisDataProject.py". The following will then within the terminal:   
+To run this script simply download it to a folder and in the same folder have folder named data with this iris data set inside. It must be named iris.csv in order to be read correctly. In the terminal change working directory to the folder containing the python script and data folder. Then type "python irisDataProject.py". The following will then show within the terminal:   
    * Dimensions of data set
     * First 5 rows
     * Last 5 rows
@@ -136,25 +141,10 @@ Then a number of graphs will show:
         * each class
     * Pairplots
         * each attribute
-    
-    
-(need to write what investigating a data set entails and how python can be used to do it)
-    * what a library is
-    * how to import etc
 
 
 
-
-(reference to pandas cheat sheet)
-
-(Box plot producing outlier data points)
-
-
-
-
-
-All values in this write up will be given to 1 decimal place
-
+All values in this write up will be given to 1 decimal place.
 
 The Iris flower data set has the following dimensions:
 ```
@@ -180,7 +170,7 @@ and
 
 ```
 
-We can see that the first 4 columns contain the Sepal length, Sepal width, Petal length and Petal width. The last column contains the species or class of Iris flower.
+We can see that the first column contains the index number, followed by 4 columns containing the Sepal length, Sepal width, Petal length and Petal width, respectively. The last column contains the species or class of Iris flower. The first and last row is contained in index 0 and 149 respectively. 
 
 The summary statisitics for the entire data set are:
 ```
@@ -212,6 +202,40 @@ From the boxplot above the large and small spreads can be seen for petal length 
   
 From the histogram above we can also see the spread of data with petal length again having the highest value. However, we can also see that the data is quite unevenly distributed. There a two clusters of data in the histogram for petal length. One from ~1 cm to ~2 cm and the other from ~3 cm to ~7 cm. This information could not be seen from the boxplots above. Petal width also appears to have an uneven distribution, with a cluster from around 0 to 0.5 cm and another from ~1 cm to ~3 cm. These clusters may represent differnt classes of flowers.
 
+
+Summary statistics for each class of flower:
+```
+                Petal Length                                               \
+                       count   mean       std  min  25%   50%    75%  max
+Class
+Iris-setosa             50.0  1.464  0.173511  1.0  1.4  1.50  1.575  1.9
+Iris-versicolor         50.0  4.260  0.469911  3.0  4.0  4.35  4.600  5.1
+Iris-virginica          50.0  5.552  0.551895  4.5  5.1  5.55  5.875  6.9
+
+                Petal Width                                            \
+                      count   mean       std  min  25%  50%  75%  max
+Class
+Iris-setosa            50.0  0.244  0.107210  0.1  0.2  0.2  0.3  0.6
+Iris-versicolor        50.0  1.326  0.197753  1.0  1.2  1.3  1.5  1.8
+Iris-virginica         50.0  2.026  0.274650  1.4  1.8  2.0  2.3  2.5
+
+                Sepal Length                                              \
+                       count   mean       std  min    25%  50%  75%  max
+Class
+Iris-setosa             50.0  5.006  0.352490  4.3  4.800  5.0  5.2  5.8
+Iris-versicolor         50.0  5.936  0.516171  4.9  5.600  5.9  6.3  7.0
+Iris-virginica          50.0  6.588  0.635880  4.9  6.225  6.5  6.9  7.9
+
+                Sepal Width
+                      count   mean       std  min    25%  50%    75%  max
+Class
+Iris-setosa            50.0  3.418  0.381024  2.3  3.125  3.4  3.675  4.4
+Iris-versicolor        50.0  2.770  0.313798  2.0  2.525  2.8  3.000  3.4
+Iris-virginica         50.0  2.974  0.322497  2.2  2.800  3.0  3.175  3.8
+```
+
+
+
 <p align="center">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/boxplotSepalLength.png">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/boxplotSepalWidth.png">
@@ -219,16 +243,18 @@ From the histogram above we can also see the spread of data with petal length ag
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/boxPlotPetalWidth.png">
   <br><b>Boxplots for the different attributes in the Iris flower data set</b><br>
 
-The boxplots above show that the clusters for petal length and width that could be seen in the histogram above represent the Iris setosa and both of Iris virginica and Iris versicolor. It is therefore possible to distinguish Iris setosa from the other two classes of flower using only one attribute; either petal length or width. It is not possible to distinguish Iris versicolor from Iris virginica using only one attribut.
+The boxplots above show that the clusters for petal length and width that could be seen in the histogram above represent the Iris setosa and both of Iris virginica and Iris versicolor. It is therefore possible to distinguish Iris setosa from the other two classes of flower using only one attribute; either petal length or width. It is not possible to distinguish Iris versicolor from Iris virginica using only one attribute.
 
 <p align="center">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataSetPairplot.png">
   <br><b>Pairplot for the different attributes in the Iris flower data set</b><br>
 
-In the above pairplot we can see scatter plots for one attribute against another. Where an attribute is plotted against itself a histogram is produced. In almost all cases the Iris setosa is easily separable from the other two classes (except when sepal width is plotted against sepal length).
+In the above pairplot we can see scatter plots for one attribute against another. Where an attribute is plotted against itself a histogram is produced. We can see in the histograms for petal length and petal width that Iris setosa is easily separable from the other two species just like the boxplots above. In the scatter plots, in almost all cases the Iris setosa is easily separable from the other two classes (except when sepal width is plotted against sepal length).
 
 
 (Add analyses done by others on this)
+
+
 http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html
 
 
