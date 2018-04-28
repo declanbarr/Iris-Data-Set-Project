@@ -31,8 +31,7 @@ The Iris data set is used within the machine learning community to test out algo
 The data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor.[1]
 ![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Ldaseparation.png)[5]
 
-(needs to be rewritten)
-Linear discriminant analysis is a method for maximising the separability of known categories. In LDA information from two variables are combined into a single axis in a way that maximizes the separation of the two categories, see pic above. The new axis is created according to two critera which are considered simultaneously:
+Linear discriminant analysis (LDA) is a method for maximising the separability of known categories. In LDA information from two variables are combined into a single axis in a way that maximizes the separation of the two categories, see pic above. The new axis is created according to two critera which are considered simultaneously:
 1. Maximize the distance between means (mu)
 2. Minimize the variation (s^2) within each category
 
@@ -49,6 +48,14 @@ Ideally d^2 should be very large and (s1^2 + s2^2) should be very small. When th
 Linear discriminant analysis can only be used on the iris data set when the species are known. When the species are not known the Nonlinear Dimensionality Reduction technique of Nonlinear Principal Component Analysis is able to separte the data based on species.[1]
 
 #### Principal component analysis
+
+Principal component analysis (PCA), like LDA is a method for reducing dimensions. However, in PCA the dimensions are reduced in such a way as to maximise the variation only. This is done by rotating the axis, see picture below.(https://www.apsl.net/blog/2017/07/18/using-linear-discriminant-analysis-lda-data-explore-step-step/)
+
+![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/PCAseparation.png)[5]
+
+Where there are only 2 axes, the axis with the most separtion is labelled PC1 and the one with the lowest is labelled PC2. For the Iris data set there will be 4 axis as there is 4 features. Therefore, PC1 will have the highest variation and PC4 will have the lowest.
+
+LDA is a supervised technique whereas PCA is unsupervised. 
 
 #### Non linear principal component analysis
 
@@ -267,12 +274,45 @@ Pearson correlation coefficient is a measure of the linear correlation between t
     
 The highest correlation is with petal width and petal length.
 
+#### Classification of Iris species using LDA and PCA
+
+LDA and PCA can be used to classify the species of Iris. See page [Classification of iris species using LDA and PCA](https://www.kaggle.com/pmw9440/classification-of-iris-species-using-lda-and-pca) for a comparison of LDA and PCA. In this it was found that the LDA model used had an accuracy of 98%. 
+
+The data was then split into a training set consisting of 100 rows and a testing set consisting of 50 rows. The 4 principal components were determined of which the first two (PC1 and PC2) were chosen. Then PC1 and PC2 were plotted on a scatter plot. A classification model was then built and tested against the testing set. The PCA model was found to have an accuracy of 90%.
+
+The machine learning library scikit-learn has functions that enable LDA and PCA to be carried out. The following page on the offical scikit-learn website [Comparison of LDA and PCA 2D projection of Iris dataset](http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html) contains a python script that compares LDA and PCA for the Iris dataset.
+
+
+<p align="center">
+  <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/scikitlearnPCA.png">
+  <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/scikitlearnLDA.png">
+  <br><b>Comparison of PCA vs LDA</b><br>
+  (ref http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html)
+
+Some of the interesting pieces from this script are given below:
+
+```python
+from sklearn import datasets
+```
+```python
+iris = datasets.load_iris()
+```
+We can see from this that the scikit-learn libary contains the Iris data set. Scikit-learn comes with 7 different toy datasets. These have been added to enable quick illustration of the behaviour of algorithms that come with scikit learn. (http://scikit-learn.org/stable/datasets/index.html)
 
 
 
+```python
+from sklearn.decomposition import PCA
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+```
+```python
+pca = PCA(n_components=2)
+```
+```python
+lda = LinearDiscriminantAnalysis(n_components=2)
+```
+The above shows how PCA and LDA are implemented using scikit-learn.
 
-
-http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html
 
 
 
@@ -364,8 +404,8 @@ https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clea
 
 
 * Reference other peoples interesing analyses of the data set
-    * Perform LDA on data set - show before and after pictures to illustrate how LDA has improved the separation of the data points (these pictures are to be added to summarise investigations below
-    * PCA
+    * ~Perform LDA on data set~ - show before and after pictures to illustrate how LDA has improved the separation of the data points (these pictures are to be added to summarise investigations below
+    * ~PCA~
     * Neural networks
     * 
  
