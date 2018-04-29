@@ -305,7 +305,7 @@ The above shows how PCA and LDA are implemented using scikit-learn. For both PCA
 
 The following is a write up on the problems that I encountered while trying to create the code to analyse the Iris data set and how I was able to solve these problems including the websites that I researched.
 
-I initially tried to read the data using numpy. I had found this on the [numpy cheat sheet](https://www.dataquest.io/blog/numpy-cheat-sheet/)
+I initially tried to read the data using numpy. I had found this on the [numpy cheat sheet](https://www.dataquest.io/blog/numpy-cheat-sheet/) [20]
 
 In:
 ```python
@@ -327,7 +327,7 @@ Out:
 
 
 
-The output from this didn't include the class attribute as this is not a number. I then found that I could read the csv file using the pandas library(https://www.kaggle.com/ashokdavas/iris-data-analysis-pandas-numpy):
+The output from this didn't include the class attribute as this is not a number. I then found that I could read the csv file using the [pandas library](https://www.kaggle.com/ashokdavas/iris-data-analysis-pandas-numpy) [21]:
 
 ```python
 import pandas as pd
@@ -362,7 +362,7 @@ dataSet = pd.read_csv('data/iris.csv', index_col=False )
 ```
 Neither of these worked.
 
-I then found that I could assign headers to the dataframe by using the following(https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60):
+I then found that I could assign headers to the dataframe by using the following code adapted from [towards data science](https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60) [22]:
 
 
 In:
@@ -382,7 +382,7 @@ Out:
 
 This assigned the correct index number to the rows and also added names to the attributes which made chosing by attriubte easier. One problem which I chose not to try and fix at this point was that only 60 rows were shown - rows 0 to 29 and 130 to 149. I was able to fix this at a later date.
 
-I then had the problem of trying to select the rows of a particular class and columns or attributes. I started with the iloc function from the Pandas library which I found on the Pandas cheat sheet(https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
+I then had the problem of trying to select the rows of a particular class and columns or attributes. I started with the iloc function from the Pandas library which I found on the [Pandas cheat sheet](https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf) [23]: 
 
 In:
 ```python
@@ -406,7 +406,7 @@ Out:
 ```
 Mean of Sepal length for rows 1 to 50 is: Sepal Length    5.006
 ```
-I then attempted to create a number of functions and loops that would produce min, max, mean etc for the different attributes and differnt classes. However, I later found on the pandas cheat sheet that I could easily produce summary statistics using the pandas describe function.
+I then attempted to create a number of functions and loops that would produce min, max, mean etc for the different attributes and differnt classes. However, I later found on the [Pandas cheat sheet](https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf) [23] that I could easily produce summary statistics using the pandas describe function.
 
 In:
 ```python
@@ -425,7 +425,7 @@ min        4.300000     2.000000      1.000000     0.100000
 max        7.900000     4.400000      6.900000     2.500000
 ```
 
-I was also able to print summary statistics for each class of Iris using the df.iloc function. However, I later discovered from the pandas cheatsheet that I could use the groupby function as follows
+I was also able to print summary statistics for each class of Iris using the df.iloc function. However, I later discovered from the [Pandas cheat sheet](https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf) [23] that I could use the groupby function as follows
 In:
 ```python
 print(df.groupby(by='Class').describe())
@@ -434,7 +434,7 @@ This produced summary statistics for each class of flower.
 
 I was able to visualise the data using the following:
 
-Pairplots(https://stackoverflow.com/questions/26597116/seaborn-plots-not-showing-up?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa):
+[Pairplots](https://stackoverflow.com/questions/26597116/seaborn-plots-not-showing-up?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa) [24]:
 
 In:
 ```python
@@ -443,12 +443,12 @@ g = sns.pairplot(df, hue='Class') # Provides a pairplot of the dataset with the 
 import matplotlib.pyplot as plt
 plt.show() # Shows the pairplot 
 ```
-Boxplots(https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.boxplot.html)
+[Boxplots](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.boxplot.html) [25]:
 In:
 ```python
 df.boxplot()
 ```
-Histograms(https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
+[Histograms](https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf) [23]:
 In:
 ```python
 df.plot.hist()
@@ -468,7 +468,7 @@ plt.show()
 df.boxplot(column='Petal Width',by='Class') # Produces boxplot for Petal Width
 plt.show()
 ```
-I was unable to easily do the same for histograms. The following website contains an example of how this can be done but it takes over around 30 lines of code to do so:
+I was unable to easily do the same for histograms. I could only compare features within a single class and not classes within a single feature . The following website contains an example of how this can be done but it takes over around 30 lines of code to do so:
 [Linear Discriminant Analysis- bit by bit](http://sebastianraschka.com/Articles/2014_python_lda.html)
 
 I was able to compare the different attributes for each class of flower on a histogram using:
@@ -484,13 +484,12 @@ setosa.plot.hist()
 versicolor.plot.hist()
 virginica.plot.hist()
 ```
-I then encountered a problem when I tried to get summary statistics for each class of flower. The entire output was not displaying. This was a similar problem to what I had encountered earlier with all the rows not displaying only in this case it was that all the columns were not displaying. I then found that I could display all the results by using the following code:
- (https://pandas.pydata.org/pandas-docs/stable/options.html)
+I then encountered a problem when I tried to get summary statistics for each class of flower. The entire output was not displaying. This was a similar problem to what I had encountered earlier with all the rows not displaying only in this case it was that all the columns were not displaying. I then found that I could display all the results by using the following code from the offical [pandas website](https://pandas.pydata.org/pandas-docs/stable/options.html) [26]:
 ```python
 pd.options.display.max_rows = 999
 pd.options.display.max_columns = 100
 ```
-I then discovered that the histogram that I had produced for the entire dataset was not accurately showing the spread of data. This was due to there not being enough bins and due to the fact that some bins where hidden behind others. I found on this website (https://pandas.pydata.org/pandas-docs/stable/visualization.html) that I could increase the number of bins and make them translucent by using the following code:
+I then discovered that the histogram that I had produced for the entire dataset was not accurately showing the spread of data. This was due to there not being enough bins and due to the fact that some bins where hidden behind others. I found on the official [pandas website](https://pandas.pydata.org/pandas-docs/stable/visualization.html) [27] that I could increase the number of bins and make them translucent by using the following code:
 
 ```python
 df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5)
@@ -501,62 +500,90 @@ df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5)
 
 #### References
 [1] Wikipedia. Iris flower data set.
-https://en.wikipedia.org/wiki/Iris_flower_data_set
+[https://en.wikipedia.org/wiki/Iris_flower_data_set]
 
 [2] Annals of Eugenics. The use of multiple measurements in taxonomic problems.
-https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
+[https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x]
 
 [3] Wikipedia. Linear discriminant analysis
-https://en.wikipedia.org/wiki/Linear_discriminant_analysis
+[https://en.wikipedia.org/wiki/Linear_discriminant_analysis]
 
 [4] Journal of the Royal Statistical Society. The utilization of multiple measurements in problems of biological classification
-https://www.jstor.org/stable/2983775?seq=1#page_scan_tab_contents
+[https://www.jstor.org/stable/2983775?seq=1#page_scan_tab_contents]
 
 [5] Towards data science. The Journey of a Machine Learning model from Building to Retraining
-https://towardsdatascience.com/the-journey-of-a-machine-learning-model-from-building-to-retraining-fe3a37c32307
+[https://towardsdatascience.com/the-journey-of-a-machine-learning-model-from-building-to-retraining-fe3a37c32307]
 
 [6] Free code camp. The Curse of Dimensionality
-https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335
+[https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335]
 
 [7] StatQuest. Linear Discriminant Analysis (LDA), clearly explained
-https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clearly-explained/
+[https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clearly-explained/]
 
 [8] APSL. Using Linear Discriminant Analysis (LDA) for data Explore: Step by Step.
-https://www.apsl.net/blog/2017/07/18/using-linear-discriminant-analysis-lda-data-explore-step-step/
+[https://www.apsl.net/blog/2017/07/18/using-linear-discriminant-analysis-lda-data-explore-step-step/]
 
 [9] National Science Teachers Association. Analyzing and Interpreting Data.
-http://ngss.nsta.org/Practices.aspx?id=4
+[http://ngss.nsta.org/Practices.aspx?id=4]
 
 [10] Wikipedia. Histogram.
-https://en.wikipedia.org/wiki/Histogram
+[https://en.wikipedia.org/wiki/Histogram]
 
 [11] LAERD. Histograms.
-https://statistics.laerd.com/statistical-guides/understanding-histograms.php
+[https://statistics.laerd.com/statistical-guides/understanding-histograms.php]
 
 [12] College of Saint Benedict's and Saint John's University. Box Plot: Display of Distribution
-http://www.physics.csbsju.edu/stats/box2.html
+[http://www.physics.csbsju.edu/stats/box2.html]
 
 [13] Statistics How To. Scatterplots.
-http://www.statisticshowto.com/probability-and-statistics/regression-analysis/scatter-plot-chart/
+[http://www.statisticshowto.com/probability-and-statistics/regression-analysis/scatter-plot-chart/]
 
 [14] Skills you need. Simple Statistical Analysis.
-https://www.skillsyouneed.com/num/simple-statistical-analysis.htm
+[https://www.skillsyouneed.com/num/simple-statistical-analysis.htm]
 
 [15] Science Buddies. Variance & Standard Deviation
-https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation
+[https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation]
 
 [16] Tutorials point. Python Pandas - DataFrame.
-https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm
+[https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm]
 
 [17] Wikipedia. Anaconda (Python distribution)
-https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)
+[https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)]
 
 [18] Scikit learn. Comparison of LDA and PCA 2D projection of Iris dataset.
 [http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html]
 
-
 [19] Scikit learn. Dataset loading utilities
-http://scikit-learn.org/stable/datasets/index.html
+[http://scikit-learn.org/stable/datasets/index.html]
+
+[20] Pyquest. Numpy cheat sheet
+[https://www.dataquest.io/blog/numpy-cheat-sheet/]
+
+[21] Kaggle. Iris data analysis pandas/numpy
+[https://www.kaggle.com/ashokdavas/iris-data-analysis-pandas-numpy]
+
+[22] Towards datascience. PCA using Python (scikit-learn)
+[https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60]
+
+[23] Github. Pandas cheat sheet
+[https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf]
+
+[24] Stackoverflow. Seaborn plots not showing up.
+[https://stackoverflow.com/questions/26597116/seaborn-plots-not-showing-up?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa]
+
+[25] Pandas. pandas.DataFrame.boxplot
+[https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.boxplot.html]
+
+[26] Pandas. Options and Settings.
+[https://pandas.pydata.org/pandas-docs/stable/options.html]
+
+[27] Pandas. Visualization.
+[https://pandas.pydata.org/pandas-docs/stable/visualization.html]
+
+
+
+
+
 
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
@@ -588,7 +615,7 @@ http://scikit-learn.org/stable/datasets/index.html
     * Will the real iris data please stand up?
     
 * Type up summary (This would be best to be done immediatley instead of typing everything up at the end)
-    * Find out how to do symbol such as mu
+    * ~Find out how to do symbol such as mu~ requires LaTeX - beyond my current abilities
 #### Summarise the data set
 ##### Completion date: ~12th April 2018~ ~19th April 2018 (using contingency week here)~
 ##### Summarise each investigation as it has been completed
@@ -632,8 +659,8 @@ http://scikit-learn.org/stable/datasets/index.html
  
 * Glossary of terms - provide a link from each term to a definition either at the bottom of the readme or to a separte file in the project folder/ provide link to wikipedia
 
-#### Summarise investigations 
-##### Completion date: ~21st April 2018~ 28th April 2018 (moved back due to use of contingency week)
+#### ~Summarise investigations~ 
+##### Completion date: ~21st April 2018~ ~28th April 2018 (moved back due to use of contingency week)~
 
 
 
