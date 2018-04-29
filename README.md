@@ -21,9 +21,9 @@ The Iris Flower Data Set was originally collected by Edgar Anderson in 1936. It 
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Petal%20and%20Sepal%20length%20and%20width.jpg">
   <br><b>Measure of petal and sepal</b><br>
 
-Ronald Fischer performed a Linear Discriminant on the data set which he detailed in his 1936 paper "The use of multiple measurements in taxonomic problems"[2]. The Linear Disciminant works on only 2 classes. The method was later developed into the Linear Discriminant analysis by C. R. Rao in 1948 "The utilization of multiple measurements in problems of biological classification"[3,4] This enables the analysis of more than two classes.
+Ronald Fischer performed a Linear Discriminant on the data set which he detailed in his 1936 paper "The use of multiple measurements in taxonomic problems"[2]. The Linear Disciminant works on only 2 classes. The method was later developed into the Linear Discriminant analysis by C. R. Rao in 1948 "The utilization of multiple measurements in problems of biological classification"[3,4]. This enables the analysis of more than two classes.
 
-The data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor[1]. The Iris data set is used within the machine learning community to test out algorithms and visualisations.[5]
+The data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor.[1] The Iris data set is used within the machine learning community to test out algorithms and visualisations.[5]
 
 
 #### Linear discriminant analysis
@@ -65,15 +65,15 @@ A range of tools can be used to help identify patterns in a data set such as vis
 
 Some examples of data visualisations are histograms, boxplots and scatterplots. 
 
-Histograms are used to represent the distribution of numerical data [10]. They enable a data set to be investigated for outliers and for skewness [11].
+Histograms are used to represent the distribution of numerical data.[10] They enable a data set to be investigated for outliers and for skewness.[11]
 
-Box plots are also used to represent distribution. Box plots represent the five number summary: minimum, first quartile, second quartile or median, third quartile and maximum [12].
+Box plots are also used to represent distribution. Box plots represent the five number summary: minimum, first quartile, second quartile or median, third quartile and maximum.[12]
 
-Scatter plots use dots to represent individual data points. They are useful to see if there is a relationship between two variables [13].
+Scatter plots use dots to represent individual data points. They are useful to see if there is a relationship between two variables.[13]
 
 (Add hyper link of histograms, boxplots and scatterplots)
 
-Some basic statistical analysis can involve calculating the average and calculating the spread of the data. Mean and median are two ways of calculating the average of a data set. Mean involves summing all values and then dividing by the number of values. Median is the middle data point. The mean can be skewed by outliers [14].Spread can be measured by the standard deviation, variance or range. The range is the simplest measure of spread and is simply the maximum minus the minimum value. Variance is the sum of the squares of the distance of each value from the mean divided by the number of values. The standard deviation is the square root of the variance [15].
+Some basic statistical analysis can involve calculating the average and calculating the spread of the data. Mean and median are two ways of calculating the average of a data set. Mean involves summing all values and then dividing by the number of values. Median is the middle data point. The mean can be skewed by outliers.[14] Spread can be measured by the standard deviation, variance or range. The range is the simplest measure of spread and is simply the maximum minus the minimum value. Variance is the sum of the squares of the distance of each value from the mean divided by the number of values. The standard deviation is the square root of the variance.[15]
 
 
 Python can be used to investigate a data set by enabling the data to be visualised as well as carrying out the statisical analysis. This can be done by the use of libraries which need to be imported, such as pandas, matplotlib and seaborn. Firstly the data set needs to be read. This can be achieved using the pandas library with the following code:
@@ -83,7 +83,7 @@ Input:
 import pandas
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"]
 ```
-This creates a pandas dataframe called "df" which contains the data from the csv file iris.csv. A data frame is two-dimensional data structure where the data is arranged in rows and columns [16]. In this case the columns are assigned the names "Sepal Length", "Sepal Width", "Petal Length", "Petal Width" and "Class". 
+This creates a pandas dataframe called "df" which contains the data from the csv file iris.csv. A data frame is two-dimensional data structure where the data is arranged in rows and columns.[16] In this case the columns are assigned the names "Sepal Length", "Sepal Width", "Petal Length", "Petal Width" and "Class". 
 
 The statisical summary of the data set can be given by typing the following:
 
@@ -102,7 +102,7 @@ df.plot.hist()
 
 ### Summary of Investigations
 
-For this project I used Anaconda version 5.0.1 and Python version 3.6.3. Anaconda is a free and open source distribution of Python used for data science [17]. Anaconda provides a number of libraries. For this project I will be using the following libraries: Pandas, Seaborn and Matplotlib.
+For this project I used Anaconda version 5.0.1 and Python version 3.6.3. Anaconda is a free and open source distribution of Python used for data science.[17] Anaconda provides a number of libraries. For this project I will be using the following libraries: Pandas, Seaborn and Matplotlib.
 
 This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). It is also included in this repository in the folder [data](https://github.com/declanbarr/Iris-Data-Set-Project/tree/master/data) as [iris.csv](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/data/iris.csv).The python script that I wrote to investigate the data set is also contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
 
@@ -262,7 +262,7 @@ The highest correlation is with petal width and petal length.
 
 #### Classification of Iris species using LDA and PCA
 
-LDA and PCA can be used to classify the species of Iris. See page [Classification of iris species using LDA and PCA](https://www.kaggle.com/pmw9440/classification-of-iris-species-using-lda-and-pca) for a comparison of LDA and PCA. In this it was found that the LDA model used had an accuracy of 98%. 
+LDA and PCA can be used to classify the species of Iris. See [Classification of iris species using LDA and PCA](https://www.kaggle.com/pmw9440/classification-of-iris-species-using-lda-and-pca) for a comparison of LDA and PCA. In this it was found that the LDA model used had an accuracy of 98%. 
 
 The data was then split into a training set consisting of 100 rows and a testing set consisting of 50 rows. The 4 principal components were determined of which the first two (PC1 and PC2) were chosen. Then PC1 and PC2 were plotted on a scatter plot. A classification model was then built and tested against the testing set. The PCA model was found to have an accuracy of 90%.
 
@@ -305,7 +305,8 @@ The above shows how PCA and LDA are implemented using scikit-learn. For both PCA
 
 The following is a write up on the problems that I encountered while trying to create the code to analyse the Iris data set and how I was able to solve these problems including the websites that I researched.
 
-I initially tried to read the data using numpy. I had found this on the numpy cheat sheet. (https://www.dataquest.io/blog/numpy-cheat-sheet/)
+I initially tried to read the data using numpy. I had found this on the [numpy cheat sheet](https://www.dataquest.io/blog/numpy-cheat-sheet/)
+
 In:
 ```python
 import numpy as np
@@ -499,63 +500,63 @@ df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5)
 
 
 #### References
-[1]: https://en.wikipedia.org/wiki/Iris_flower_data_set
-Wikipedia. Iris flower data set
+[1] Wikipedia. Iris flower data set.
+https://en.wikipedia.org/wiki/Iris_flower_data_set
 
-[2]: https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
-Annals of Eugenics. The use of multiple measurements in taxonomic problems.
+[2] Annals of Eugenics. The use of multiple measurements in taxonomic problems.
+https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
 
-[3]: https://en.wikipedia.org/wiki/Linear_discriminant_analysis 
-Wikipedia. Linear discriminant analysis
+[3] Wikipedia. Linear discriminant analysis
+https://en.wikipedia.org/wiki/Linear_discriminant_analysis
 
-[4]: https://www.jstor.org/stable/2983775?seq=1#page_scan_tab_contents]
-Journal of the Royal Statistical Society. The utilization of multiple measurements in problems of biological classification
+[4] Journal of the Royal Statistical Society. The utilization of multiple measurements in problems of biological classification
+https://www.jstor.org/stable/2983775?seq=1#page_scan_tab_contents
 
-[5]: https://towardsdatascience.com/the-journey-of-a-machine-learning-model-from-building-to-retraining-fe3a37c32307
-Towards data science. The Journey of a Machine Learning model from Building to Retraining
+[5] Towards data science. The Journey of a Machine Learning model from Building to Retraining
+https://towardsdatascience.com/the-journey-of-a-machine-learning-model-from-building-to-retraining-fe3a37c32307
 
-[6]: https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335
-Free code camp. The Curse of Dimensionality
+[6] Free code camp. The Curse of Dimensionality
+https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335
 
-[7]: https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clearly-explained/
-StatQuest. Linear Discriminant Analysis (LDA), clearly explained
+[7] StatQuest. Linear Discriminant Analysis (LDA), clearly explained
+https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clearly-explained/
 
-[8]: https://www.apsl.net/blog/2017/07/18/using-linear-discriminant-analysis-lda-data-explore-step-step/
-APSL. Using Linear Discriminant Analysis (LDA) for data Explore: Step by Step.
+[8] APSL. Using Linear Discriminant Analysis (LDA) for data Explore: Step by Step.
+https://www.apsl.net/blog/2017/07/18/using-linear-discriminant-analysis-lda-data-explore-step-step/
 
-[9]: http://ngss.nsta.org/Practices.aspx?id=4
-National Science Teachers Association. Analyzing and Interpreting Data.
+[9] National Science Teachers Association. Analyzing and Interpreting Data.
+http://ngss.nsta.org/Practices.aspx?id=4
 
-[10]: https://en.wikipedia.org/wiki/Histogram
-Wikipedia. Histogram.
+[10] Wikipedia. Histogram.
+https://en.wikipedia.org/wiki/Histogram
 
-[11]: https://statistics.laerd.com/statistical-guides/understanding-histograms.php
-LAERD. Histograms.
+[11] LAERD. Histograms.
+https://statistics.laerd.com/statistical-guides/understanding-histograms.php
 
-[12]: http://www.physics.csbsju.edu/stats/box2.html
-College of Saint Benedict's and Saint John's University. Box Plot: Display of Distribution
+[12] College of Saint Benedict's and Saint John's University. Box Plot: Display of Distribution
+http://www.physics.csbsju.edu/stats/box2.html
 
-[13]: http://www.statisticshowto.com/probability-and-statistics/regression-analysis/scatter-plot-chart/
-Statistics How To. Scatterplots.
+[13] Statistics How To. Scatterplots.
+http://www.statisticshowto.com/probability-and-statistics/regression-analysis/scatter-plot-chart/
 
-[14]: https://www.skillsyouneed.com/num/simple-statistical-analysis.html
-Skills you need. Simple Statistical Analysis.
+[14] Skills you need. Simple Statistical Analysis.
+https://www.skillsyouneed.com/num/simple-statistical-analysis.htm
 
-[15]: https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation
-Science Buddies. Variance & Standard Deviation
+[15] Science Buddies. Variance & Standard Deviation
+https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation
 
-[16]: https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm
-Tutorials point. Python Pandas - DataFrame.
+[16] Tutorials point. Python Pandas - DataFrame.
+https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm
 
-[17]: https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)
-Wikipedia. Anaconda (Python distribution)
+[17] Wikipedia. Anaconda (Python distribution)
+https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)
 
-[18]: http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html
-Scikit learn. Comparison of LDA and PCA 2D projection of Iris dataset
+[18] Scikit learn. Comparison of LDA and PCA 2D projection of Iris dataset.
+[http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html]
 
-[19]: scikit-learn.org/stable/datasets/index.html
-Scikit learn. Dataset loading utilities
 
+[19] Scikit learn. Dataset loading utilities
+http://scikit-learn.org/stable/datasets/index.html
 
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
