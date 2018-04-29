@@ -9,6 +9,8 @@
 # Histograms https://pandas.pydata.org/pandas-docs/stable/visualization.html
 
 import pandas as pd # imports the pandas library as pd
+import matplotlib.pyplot as plt # Imports the matplotlib.pyplot library as plt
+import seaborn as sns # Imports the seaborn library as sns
 
 pd.options.display.max_rows = 999 # Set max rows to 999 to ensure all rows are displayed (from https://pandas.pydata.org/pandas-docs/stable/options.html)
 pd.options.display.max_columns = 100 # Set max columns to 100 to ensure all data is shown for describe() function (from https://pandas.pydata.org/pandas-docs/stable/options.html)
@@ -48,34 +50,37 @@ versicolor = (df.iloc[50:100]) # Assigns the subset from rows 50 to 99 to versic
 virginica = (df.iloc[100:150]) # Assigns the subset from rows 100 to 149 to virginica
 
 
-import matplotlib.pyplot as plt # Imports the matplotlib.pyplot library as plt
-
 # Boxplots
 df.boxplot() # Produces boxplot for entire data set (produces outlier data points for Sepal Width)
 plt.show() # Shows the boxplot created for entire data set
 
 df.boxplot(column='Sepal Length',by='Class') # Produces boxplot for Sepal Length
 plt.show() # Shows the boxplot created for Sepal Length
+
 df.boxplot(column='Sepal Width',by='Class') # Produces boxplot for Sepal Width
 plt.show() # Shows the boxplot created Sepal Width
+
 df.boxplot(column='Petal Length',by='Class') # Produces boxplot for Petal Length
 plt.show() # Shows the boxplot created for Petal Length
+
 df.boxplot(column='Petal Width',by='Class') # Produces boxplot for Petal Width
 plt.show() # Shows the boxplot created for Petal Width
+
 
 # Histogram
 df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5) # Creates a histogram for the entire dataset
 plt.show() # Shows the histogram created for the entire dataset
+
 setosa.plot.hist(title='Histogram for Iris Setosa') # Creates a histogram for Iris Setosa
 plt.show() # Shows the histogram created for Iris setosa
+
 versicolor.plot.hist(title='Histogram for Iris Versicolor') # Creates a histogram for Iris Versicolor
 plt.show() # Shows the histogram created for Iris versicolor
+
 virginica.plot.hist(title='Histogram for Iris Virginica') # Creates a histogram for Iris Virginica
 plt.show() # Shows the histogram created for Iris virginica
 
 
 # Pairplot
-import seaborn as sns # Imports the seaborn library as sns
 sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the different species coloured differently
-
 plt.show() # Shows the pairplot created
