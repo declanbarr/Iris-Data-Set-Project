@@ -23,12 +23,12 @@ The Iris Flower Data Set was originally collected by Edgar Anderson in 1936. It 
 
 Ronald Fischer performed a Linear Discriminant on the data set which he detailed in his 1936 paper "The use of multiple measurements in taxonomic problems"[2]. The Linear Disciminant works on only 2 classes. The method was later developed into the Linear Discriminant analysis by C. R. Rao in 1948 "The utilization of multiple measurements in problems of biological classification"[3,4] This enables the analysis of more than two classes.
 
-The Iris data set is used within the machine learning community to test out algorithms and visualisations.[5] https://towardsdatascience.com/the-journey-of-a-machine-learning-model-from-building-to-retraining-fe3a37c32307. 
+The data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor[1]. The Iris data set is used within the machine learning community to test out algorithms and visualisations.[5]
 
 
 #### Linear discriminant analysis
 
-The data set contains two clusters. One cluster contains Iris setosa and the other contains Iris virginica and Iris versicolor.[1]
+
 ![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/Ldaseparation.png)[6]
 
 Linear discriminant analysis (LDA) is a method for maximising the separability of known categories. In LDA information from two variables are combined into a single axis in a way that maximizes the separation of the two categories, see pic above. The new axis is created according to two critera which are considered simultaneously:
@@ -50,7 +50,7 @@ Linear discriminant analysis can only be used on the iris data set when the spec
 
 #### Principal component analysis
 
-Principal component analysis (PCA), like LDA is a method for reducing dimensions. However, in PCA the dimensions are reduced in such a way as to maximise the variation only. This is done by rotating the axis, see picture below.[8](https://www.apsl.net/blog/2017/07/18/using-linear-discriminant-analysis-lda-data-explore-step-step/)
+Principal component analysis (PCA), like LDA is a method for reducing dimensions. However, in PCA the dimensions are reduced in such a way as to maximise the variation only. This is done by rotating the axis, see picture below.[8]
 
 ![alt text](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/PCAseparation.png)[6]
 
@@ -65,16 +65,15 @@ A range of tools can be used to help identify patterns in a data set such as vis
 
 Some examples of data visualisations are histograms, boxplots and scatterplots. 
 
-Histograms are used to represent the distribution of numerical data. [10](https://en.wikipedia.org/wiki/Histogram). They enable a data set to be investigated for outliers and for skewness. [11]https://statistics.laerd.com/statistical-guides/understanding-histograms.php.
+Histograms are used to represent the distribution of numerical data [10]. They enable a data set to be investigated for outliers and for skewness [11].
 
-Box plots are also used to represent distribution. Box plots represent the five number summary: minimum, first quartile, second quartile or median, third quartile and maximum. [12]http://www.physics.csbsju.edu/stats/box2.html
+Box plots are also used to represent distribution. Box plots represent the five number summary: minimum, first quartile, second quartile or median, third quartile and maximum [12].
 
-Scatter plots use dots to represent individual data points. They are useful to see if there is a relationship between two variables. [13]http://www.statisticshowto.com/probability-and-statistics/regression-analysis/scatter-plot-chart/
+Scatter plots use dots to represent individual data points. They are useful to see if there is a relationship between two variables [13].
 
 (Add hyper link of histograms, boxplots and scatterplots)
 
-Some basic statistical analysis can involve calculating the average and calculating the spread of the data. Mean and median are two ways of calculating the average of a data set. Mean involves summing all values and then dividing by the number of values. Median is the middle data point. The mean can be skewed by outliers [14]https://www.skillsyouneed.com/num/simple-statistical-analysis.html
-Spread can be measured by the standard deviation, variance or range. The range is the simplest measure of spread and is simply the maximum minus the minimum value. Variance is the sum of the squares of the distance of each value from the mean divided by the number of values. The standard deviation is the square root of the variance. [15] https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation. 
+Some basic statistical analysis can involve calculating the average and calculating the spread of the data. Mean and median are two ways of calculating the average of a data set. Mean involves summing all values and then dividing by the number of values. Median is the middle data point. The mean can be skewed by outliers [14].Spread can be measured by the standard deviation, variance or range. The range is the simplest measure of spread and is simply the maximum minus the minimum value. Variance is the sum of the squares of the distance of each value from the mean divided by the number of values. The standard deviation is the square root of the variance [15].
 
 
 Python can be used to investigate a data set by enabling the data to be visualised as well as carrying out the statisical analysis. This can be done by the use of libraries which need to be imported, such as pandas, matplotlib and seaborn. Firstly the data set needs to be read. This can be achieved using the pandas library with the following code:
@@ -84,7 +83,7 @@ Input:
 import pandas
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"]
 ```
-This creates a pandas dataframe called "df" which contains the data from the csv file iris.csv. A data frame is two-dimensional data structure where the data is arranged in rows and columns. [16](https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm). In this case the columns are assigned the names "Sepal Length", "Sepal Width", "Petal Length", "Petal Width" and "Class". 
+This creates a pandas dataframe called "df" which contains the data from the csv file iris.csv. A data frame is two-dimensional data structure where the data is arranged in rows and columns [16]. In this case the columns are assigned the names "Sepal Length", "Sepal Width", "Petal Length", "Petal Width" and "Class". 
 
 The statisical summary of the data set can be given by typing the following:
 
@@ -103,7 +102,7 @@ df.plot.hist()
 
 ### Summary of Investigations
 
-For this project I used Anaconda version 5.0.1 and Python version 3.6.3. Anaconda is a free and open source distribution of Python used for data science [17](https://en.wikipedia.org/wiki/Anaconda_(Python_distribution). Anaconda provides a number of libraries. For this project I will be using the following libraries: Pandas, Seaborn and Matplotlib.
+For this project I used Anaconda version 5.0.1 and Python version 3.6.3. Anaconda is a free and open source distribution of Python used for data science [17]. Anaconda provides a number of libraries. For this project I will be using the following libraries: Pandas, Seaborn and Matplotlib.
 
 This Iris Flower Data Set can be downloaded from [UCI's Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). It is also included in this repository in the folder [data](https://github.com/declanbarr/Iris-Data-Set-Project/tree/master/data) as [iris.csv](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/data/iris.csv).The python script that I wrote to investigate the data set is also contained within this repository and is named [irisDataProject.py](https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/irisDataProject.py).
 
@@ -274,7 +273,7 @@ The machine learning library scikit-learn has functions that enable LDA and PCA 
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/scikitlearnPCA.png">
   <img src="https://github.com/declanbarr/Iris-Data-Set-Project/blob/master/scikitlearnLDA.png">
   <br><b>Comparison of PCA vs LDA</b><br>
-  [17]http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html)
+  [18]
 
 Some of the interesting pieces from this script are given below:
 
@@ -284,7 +283,7 @@ from sklearn import datasets
 ```python
 iris = datasets.load_iris()
 ```
-We can see from this that the scikit-learn libary contains the Iris data set. Scikit-learn comes with 7 different toy datasets. These have been added to enable quick illustration of the behaviour of algorithms that come with scikit learn. [18](http://scikit-learn.org/stable/datasets/index.html)
+We can see from this that the scikit-learn libary contains the Iris data set. Scikit-learn comes with 7 different toy datasets. These have been added to enable quick illustration of the behaviour of algorithms that come with scikit learn. [19]
 
 
 
@@ -543,14 +542,19 @@ df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5)
 [https://www.skillsyouneed.com/num/simple-statistical-analysis.html]
 
 [15] Science Buddies. Variance & Standard Deviation
-https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation. 
+[https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation]
 
 [16] Tutorials point. Python Pandas - DataFrame.
-https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm
+[https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm]
 
 [17] Wikipedia. Anaconda (Python distribution)
-https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)
+[https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)]
 
+[18] Scikit learn. Comparison of LDA and PCA 2D projection of Iris dataset
+[http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html]
+
+[19] Scikit learn. Dataset loading utilities
+[scikit-learn.org/stable/datasets/index.html]
 
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
