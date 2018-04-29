@@ -499,62 +499,63 @@ df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5)
 
 
 #### References
-[1] Wikipedia. Iris flower data set
-[https://en.wikipedia.org/wiki/Iris_flower_data_set]
+[1]: https://en.wikipedia.org/wiki/Iris_flower_data_set
+Wikipedia. Iris flower data set
 
-[2] Annals of Eugenics. The use of multiple measurements in taxonomic problems.
-[https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x]
+[2]: https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
+Annals of Eugenics. The use of multiple measurements in taxonomic problems.
 
-[3] Wikipedia. Linear discriminant analysis
-[https://en.wikipedia.org/wiki/Linear_discriminant_analysis]
+[3]: https://en.wikipedia.org/wiki/Linear_discriminant_analysis 
+Wikipedia. Linear discriminant analysis
 
-[4] Journal of the Royal Statistical Society. The utilization of multiple measurements in problems of biological classification
-[https://www.jstor.org/stable/2983775?seq=1#page_scan_tab_contents]
+[4]: https://www.jstor.org/stable/2983775?seq=1#page_scan_tab_contents]
+Journal of the Royal Statistical Society. The utilization of multiple measurements in problems of biological classification
 
-[5] Towards data science. The Journey of a Machine Learning model from Building to Retraining
-[https://towardsdatascience.com/the-journey-of-a-machine-learning-model-from-building-to-retraining-fe3a37c32307]
+[5]: https://towardsdatascience.com/the-journey-of-a-machine-learning-model-from-building-to-retraining-fe3a37c32307
+Towards data science. The Journey of a Machine Learning model from Building to Retraining
 
-[6] Free code camp. The Curse of Dimensionality
-[https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335]
+[6]: https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335
+Free code camp. The Curse of Dimensionality
 
-[7] StatQuest. Linear Discriminant Analysis (LDA), clearly explained
-[https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clearly-explained/]
+[7]: https://statquest.org/2016/07/10/statquest-linear-discriminant-analysis-lda-clearly-explained/
+StatQuest. Linear Discriminant Analysis (LDA), clearly explained
 
-[8] APSL. Using Linear Discriminant Analysis (LDA) for data Explore: Step by Step.
-[https://www.apsl.net/blog/2017/07/18/using-linear-discriminant-analysis-lda-data-explore-step-step/]
+[8]: https://www.apsl.net/blog/2017/07/18/using-linear-discriminant-analysis-lda-data-explore-step-step/
+APSL. Using Linear Discriminant Analysis (LDA) for data Explore: Step by Step.
 
-[9] National Science Teachers Association. Analyzing and Interpreting Data
-[http://ngss.nsta.org/Practices.aspx?id=4]
+[9]: http://ngss.nsta.org/Practices.aspx?id=4
+National Science Teachers Association. Analyzing and Interpreting Data.
 
-[10] Wikipedia. Histogram
-[https://en.wikipedia.org/wiki/Histogram]
+[10]: https://en.wikipedia.org/wiki/Histogram
+Wikipedia. Histogram.
 
-[11] LAERD. Histograms
-[https://statistics.laerd.com/statistical-guides/understanding-histograms.php]
+[11]: https://statistics.laerd.com/statistical-guides/understanding-histograms.php
+LAERD. Histograms.
 
-[12] College of Saint Benedict's and Saint John's University. Box Plot: Display of Distribution
-[http://www.physics.csbsju.edu/stats/box2.html]
+[12]: http://www.physics.csbsju.edu/stats/box2.html
+College of Saint Benedict's and Saint John's University. Box Plot: Display of Distribution
 
-[13] Statistics How To. Scatterplots.
-[http://www.statisticshowto.com/probability-and-statistics/regression-analysis/scatter-plot-chart/]
+[13]: http://www.statisticshowto.com/probability-and-statistics/regression-analysis/scatter-plot-chart/
+Statistics How To. Scatterplots.
 
-[14] Skills you need. Simple Statistical Analysis.
-[https://www.skillsyouneed.com/num/simple-statistical-analysis.html]
+[14]: https://www.skillsyouneed.com/num/simple-statistical-analysis.html
+Skills you need. Simple Statistical Analysis.
 
-[15] Science Buddies. Variance & Standard Deviation
-[https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation]
+[15]: https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation
+Science Buddies. Variance & Standard Deviation
 
-[16] Tutorials point. Python Pandas - DataFrame.
-[https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm]
+[16]: https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm
+Tutorials point. Python Pandas - DataFrame.
 
-[17] Wikipedia. Anaconda (Python distribution)
-[https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)]
+[17]: https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)
+Wikipedia. Anaconda (Python distribution)
 
-[18] Scikit learn. Comparison of LDA and PCA 2D projection of Iris dataset
-[http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html]
+[18]: http://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html
+Scikit learn. Comparison of LDA and PCA 2D projection of Iris dataset
 
-[19] Scikit learn. Dataset loading utilities
-[scikit-learn.org/stable/datasets/index.html]
+[19]: scikit-learn.org/stable/datasets/index.html
+Scikit learn. Dataset loading utilities
+
 
 ### Project Plan
 #### Research background information about the data set and write a summary about it.
