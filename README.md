@@ -61,17 +61,15 @@ LDA is a supervised technique (class labels are known) whereas PCA is unsupervis
 
 ### Investigating a data set
 
-A range of tools can be used to help identify patterns in a data set such as visualisation and statistical analysis. [9](http://ngss.nsta.org/Practices.aspx?id=4) 
+A range of tools can be used to help identify patterns in a data set such as visualisation and statistical analysis. [9] 
 
 Some examples of data visualisations are histograms, boxplots and scatterplots. 
 
-Histograms are used to represent the distribution of numerical data.[10] They enable a data set to be investigated for outliers and for skewness.[11]
+[Histograms](https://en.wikipedia.org/wiki/Histogram) are used to represent the distribution of numerical data.[10] They enable a data set to be investigated for outliers and for skewness.[11]
 
-Box plots are also used to represent distribution. Box plots represent the five number summary: minimum, first quartile, second quartile or median, third quartile and maximum.[12]
+[Box plots](https://en.wikipedia.org/wiki/Box_plot) are also used to represent distribution. Box plots represent the five number summary: minimum, first quartile, second quartile or median, third quartile and maximum.[12]
 
-Scatter plots use dots to represent individual data points. They are useful to see if there is a relationship between two variables.[13]
-
-(Add hyper link of histograms, boxplots and scatterplots)
+[Scatter plots](https://en.wikipedia.org/wiki/Scatter_plot) use dots to represent individual data points. They are useful to see if there is a relationship between two variables.[13]
 
 Some basic statistical analysis can involve calculating the average and calculating the spread of the data. Mean and median are two ways of calculating the average of a data set. Mean involves summing all values and then dividing by the number of values. Median is the middle data point. The mean can be skewed by outliers.[14] Spread can be measured by the standard deviation, variance or range. The range is the simplest measure of spread and is simply the maximum minus the minimum value. Variance is the sum of the squares of the distance of each value from the mean divided by the number of values. The standard deviation is the square root of the variance.[15]
 
@@ -586,37 +584,40 @@ df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5)
 
 
 ### Project Plan
-#### Research background information about the data set and write a summary about it.
+#### ~Research background information about the data set and write a summary about it.~
 ##### Completion date: ~3rd April 2018~ ~12th April 2018~ ~19th April 2018~ (using contingency week here)(To be completed in parallel with "Summarise the Data Set")
-##### To be tidied up before completion data of 29th April 2018 - No major new topics to be introduced
+##### ~To be tidied up before completion data of 29th April 2018 - No major new topics to be introduced~
+
+The following that has been highlighted in bold contains information that was beyond my current capabilites and time constraints and was therefore not included in the summary. I will attempt to understand this after the project due date and write code on it and to develop this project further.
+
 * Read wikipedia article on Iris Flower Data Set
     * ~Introduction~
     * Use of the data set
         * ~First two paragraphs~
-        * Last paragraph (too many unkown terms)
+        * __Last paragraph (too many unkown terms)__
 * Read unknown terms from Iris Flower Data Set on wikipedia  
     * ~linear discriminant analysis/model~ https://www.youtube.com/watch?v=azXCzI57Yfc
-    * support vector machines
-    * cluster analysis (also explain what a cluster is)
-    * data mining
-    * nonlinear branching principal component
-    * metro map
-    * Nonlinear Principal Component Analysis
+    * __support vector machines__
+    * __cluster analysis (also explain what a cluster is)__
+    * __data mining__
+    * __nonlinear branching principal component__
+    * __metro map__
+    * __Nonlinear Principal Component Analysis__
 * Read references on Iris Flower Data Set on wikipedia
     * ~Edgar Anderson (1936). "The species problem in Iris"~ (contains a lot of irrelevant information for this project)
-    * R. A. Fisher (1936). "The use of multiple measurements in taxonomic problems"
-    * A. N. Gorban, A. Zinovyev. Principal manifolds and graphs in practice: from molecular biology to dynamical systems
-    * UCI Machine Learning Repository: Iris Data Set
-        * Duda,R.O., & Hart,P.E. (1973) Pattern Classification and Scene Analysis. (Q327.D83) John Wiley & Sons. ISBN 0-471-22361-1. See page 218. 
-        * Dasarathy, B.V. (1980) "Nosing Around the Neighborhood: A New System Structure and Classification Rule for Recognition in Partially Exposed Environments". IEEE Transactions on Pattern Analysis and Machine Intelligence, Vol. PAMI-2, No. 1, 67-71. 
-        * Gates, G.W. (1972) "The Reduced Nearest Neighbor Rule". IEEE Transactions on Information Theory, May 1972, 431-433. 
-    * On Using Class-Labels in Evaluation of Clusterings
-    * Topological grammars for data approximation
+    * __R. A. Fisher (1936). "The use of multiple measurements in taxonomic problems"__
+    * __A. N. Gorban, A. Zinovyev. Principal manifolds and graphs in practice: from molecular biology to dynamical systems__
+    * ~UCI Machine Learning Repository: Iris Data Set~
+        * __Duda,R.O., & Hart,P.E. (1973) Pattern Classification and Scene Analysis. (Q327.D83) John Wiley & Sons. ISBN 0-471-22361-1. See page 218. __
+        * __Dasarathy, B.V. (1980) "Nosing Around the Neighborhood: A New System Structure and Classification Rule for Recognition in Partially Exposed Environments". IEEE Transactions on Pattern Analysis and Machine Intelligence, Vol. PAMI-2, No. 1, 67-71. __
+        * __Gates, G.W. (1972) "The Reduced Nearest Neighbor Rule". IEEE Transactions on Information Theory, May 1972, 431-433.__ 
+    * __On Using Class-Labels in Evaluation of Clusterings__
+    * __Topological grammars for data approximation__
     * Will the real iris data please stand up?
     
-* Type up summary (This would be best to be done immediatley instead of typing everything up at the end)
-    * ~Find out how to do symbol such as mu~ requires LaTeX - beyond my current abilities
-#### Summarise the data set
+* ~Type up summary (This would be best to be done immediatley instead of typing everything up at the end)~
+    * __~Find out how to do symbol such as mu~ requires LaTeX - beyond my current abilities__
+#### ~Summarise the data set~
 ##### Completion date: ~12th April 2018~ ~19th April 2018 (using contingency week here)~
 ##### Summarise each investigation as it has been completed
 
@@ -639,7 +640,7 @@ df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5)
 * ~Boxplots - produce boxplots comparing the same attribute across different species~
 * ~Read https://warwick.ac.uk/fac/sci/moac/people/students/peter_cock/r/iris_plots/~
     * ~Scatter plots of sw, sl, pl and pw. See https://www.kaggle.com/mathewnik90/machinelearning-helloworld-with-iris-full-analysis for pair plots~
-    * Can relationships be made between sizes eg
+    * __Can relationships be made between sizes eg__
         * sl/sw and plot against pl/pw?
         * sw times sl plotted against pw times pl?
         * 1/sw plotted against 1/sl
@@ -652,9 +653,9 @@ df.plot.hist(title='Histogram for entire data set', bins=20, alpha=0.5)
 
 
 * Reference other peoples interesing analyses of the data set
-    * ~Perform LDA on data set~ - show before and after pictures to illustrate how LDA has improved the separation of the data points (these pictures are to be added to summarise investigations below
+    * ~Perform LDA on data set~ - show before and after pictures to illustrate how LDA has improved the separation of the data points
     * ~PCA~
-    * Neural networks
+    * __Neural networks__
     * 
  
 * Glossary of terms - provide a link from each term to a definition either at the bottom of the readme or to a separte file in the project folder/ provide link to wikipedia
