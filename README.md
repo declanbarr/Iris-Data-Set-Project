@@ -661,7 +661,7 @@ The following that has been highlighted in bold contains information that was be
     * __Neural networks__
     * 
  
-* Glossary of terms - provide a link from each term to a definition either at the bottom of the readme or to a separte file in the project folder/ provide link to wikipedia
+* ~Glossary of terms - provide a link from each term to a definition either at the bottom of the readme or to a separte file in the project folder/ provide link to wikipedia~ Links to wikipedia added for some terms. Other terms are adequately defined in the text
 
 #### ~Summarise investigations~ 
 ##### Completion date: ~21st April 2018~ ~28th April 2018 (moved back due to use of contingency week)~
