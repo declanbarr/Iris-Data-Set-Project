@@ -17,8 +17,8 @@ df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal L
 
 rows, columns = df.shape
 
-pd.options.display.max_rows = rows # Set max rows to 999 to ensure all rows are displayed (from https://pandas.pydata.org/pandas-docs/stable/options.html)
-pd.options.display.max_columns = columns # Set max columns to 100 to ensure all data is shown for describe() function (from https://pandas.pydata.org/pandas-docs/stable/options.html)
+pd.options.display.max_rows = rows # Set max rows to number of rows in data set ensure all rows are displayed (from https://pandas.pydata.org/pandas-docs/stable/options.html)
+pd.options.display.max_columns = columns # Set max columns to number of columns in data set to ensure all data is shown for describe() function (from https://pandas.pydata.org/pandas-docs/stable/options.html)
 
 
 print(f"There are {rows} rows and {columns} columns.") # Provides the dimensions of the data set
