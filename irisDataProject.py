@@ -12,12 +12,16 @@ import pandas as pd # imports the pandas library as pd
 import matplotlib.pyplot as plt # Imports the matplotlib.pyplot library as plt
 import seaborn as sns # Imports the seaborn library as sns
 
-pd.options.display.max_rows = 999 # Set max rows to 999 to ensure all rows are displayed (from https://pandas.pydata.org/pandas-docs/stable/options.html)
-pd.options.display.max_columns = 100 # Set max columns to 100 to ensure all data is shown for describe() function (from https://pandas.pydata.org/pandas-docs/stable/options.html)
 
 df = pd.read_csv('data/iris.csv', names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"] ) # Read csv file and assigns the attribute names as headers to columns
 
-print("Number of rows and columns: ", df.shape) # Provides the dimensions of the data set
+rows, columns = df.shape
+
+pd.options.display.max_rows = rows # Set max rows to 999 to ensure all rows are displayed (from https://pandas.pydata.org/pandas-docs/stable/options.html)
+pd.options.display.max_columns = columns # Set max columns to 100 to ensure all data is shown for describe() function (from https://pandas.pydata.org/pandas-docs/stable/options.html)
+
+
+print(f"There are {rows} rows and {columns} columns.") # Provides the dimensions of the data set
 
 print("The first 5 rows of the Iris Data Set are as follows: ")
 print(df.head(5)) # Prints first 5 rows
@@ -84,3 +88,4 @@ plt.show() # Shows the histogram created for Iris virginica
 # Pairplot
 sns.pairplot(df, hue='Class') # Creates a pairplot of the dataset with the different species coloured differently
 plt.show() # Shows the pairplot created
+
